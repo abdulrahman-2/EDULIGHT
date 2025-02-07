@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react"; // Import useEffect
+import { useRef, useEffect, useState } from "react";
 import { toggleSidebar } from "@/features/sidebar/sidebarSlice";
 import { AppDispatch, RootState } from "@/store/store";
 import { CircleX, LogOutIcon, LucideLayoutDashboard } from "lucide-react";
@@ -8,18 +8,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { useClickOutside } from "@/hooks/use-click-outside";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
-import eduLogo from "@/assets/das-images/edu-logo.svg";
+import lightLogo from "@/assets/das-images/light-logo.png";
+import darkLogo from "@/assets/das-images/dark-logo.png";
 import { links } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+
 const Sidebar = () => {
-  
   const { isOpen } = useSelector((state: RootState) => state.sidebar);
   const dispatch = useDispatch<AppDispatch>();
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const pathName = usePathname()
+  const pathName = usePathname();
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  //  const isActive = pathName === links.label /
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClickOutside = () => {
     if (isOpen) {
@@ -37,56 +43,82 @@ const Sidebar = () => {
     }
   }, [isMobileDevice, isOpen, dispatch]);
 
-
-
+  if (!mounted) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div
       ref={sidebarRef}
-      className={`dark:bg-primary/10 shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px] ${
+      className={`shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px] ${
         isOpen
-          ? "flex w-[270px] bg-background dark:bg-background absolute z-50 inset-0"
-          : "hidden"
+          ? "flex w-[270px] bg-background absolute z-50 inset-0"
+          : "hidden dark:bg-primary/10"
       }`}
     >
-      {isOpen && (
-        <CircleX
-          className="absolute top-2 right-2 cursor-pointer"
-          onClick={() => dispatch(toggleSidebar())}
-        />
-      )}
-
-      <div className="p-4">
-        <div className="flex items-center ">
-          <LucideLayoutDashboard className="mt-2 text-[#293897]" size={28} />
-
-          <Image src={eduLogo} width={220} height={50} alt="logo" />
+      <div className="p-4 w-full relative">
+        <div
+          className={`flex items-center justify-between sm:justify-center md:justify-start`}
+        >
+          <div className="flex items-center justify-start gap-2 sm:justify-center md:justify-start">
+            <LucideLayoutDashboard
+              className="text-primary dark:text-white"
+              size={25}
+            />
+            {theme === "dark" ? (
+              <>
+                <Image
+                  src={darkLogo}
+                  width={150}
+                  height={50}
+                  alt="logo"
+                  className={"sm:hidden md:block"}
+                />
+              </>
+            ) : (
+              <Image
+                src={lightLogo}
+                width={150}
+                height={50}
+                alt="logo"
+                className={"sm:hidden md:block"}
+              />
+            )}
+          </div>
+          {isOpen && (
+            <CircleX
+              className="absolute right-2 cursor-pointer"
+              onClick={() => dispatch(toggleSidebar())}
+            />
+          )}
         </div>
-<ul className="mt-6 ">
-{links.map((link) => {
-            const isActive = pathName === link.url; 
+        <ul className="mt-6">
+          {links.map((link) => {
+            const isActive = pathName === link.url;
             return (
-              <li
-              key={link.id}
-              className={`mb-3 flex items-center sm:justify-center md:justify-start  gap-3 p-2 text-[#293897] rounded-xl transition-all duration-300 ${
-                isActive ? "bg-[#293897] text-white" : "hover:bg-[#293897] hover:text-white"
-              }`}
-            >
-              <span className="cursor-pointer text-lg ">{link.icon}</span>
-              <Link href={link.url} className="text-md font-medium  sm:hidden md:block">
-                {link.label}
+              <Link href={link.url} key={link.id}>
+                <li
+                  className={`w-full cursor-pointer mb-3 flex items-center sm:justify-center md:justify-start gap-3 p-2 dark:text-white rounded-xl transition-all duration-200 ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "hover:bg-[#EFF6FF] dark:hover:bg-[#172554]"
+                  }`}
+                >
+                  <span className="text-lg ">{link.icon}</span>
+                  <span className="text-md font-medium sm:hidden md:block">
+                    {link.label}
+                  </span>
+                </li>
               </Link>
-            </li>
             );
           })}
-          <li className='mb-3 absolute bottom-0 flex items-center sm:justify-center md:justify-start  gap-3 p-2 text-[#293897] rounded-xl transition-all duration-300  hover:bg- hover:text-white'>
-
-              <span className="cursor-pointer text-lg ">{<LogOutIcon />}</span>
-              <Link href="/" className="text-md font-medium  sm:hidden md:block">
-                Logout
-              </Link>
+          <li className="w-[calc(100%-30px)] cursor-pointer mb-3 absolute bottom-0 flex items-center sm:justify-center md:justify-start gap-3 p-2 dark:text-white rounded-xl transition-all duration-200 hover:bg-[#172554]">
+            <span className="cursor-pointer text-lg ">{<LogOutIcon />}</span>
+            <Link href="/" className="text-md font-medium  sm:hidden md:block">
+              Logout
+            </Link>
           </li>
-</ul>
+        </ul>
       </div>
     </div>
   );
