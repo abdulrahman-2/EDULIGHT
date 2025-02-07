@@ -16,7 +16,7 @@ const Navbar = () => {
     dispatch(toggleSidebar());
   };
   return (
-    <div className="h-[60px] shadow-md dark:shadow-primary/20 dark:bg-primary/10 px-3 flex items-center justify-between gap-6">
+    <div className=" h-[60px] shadow-md dark:shadow-primary/20 dark:bg-primary/10 px-3 flex items-center justify-between gap-6">
       <div className="sm:hidden flex items-center gap-1">
         <LucideMenu
           onClick={handleToggle}
