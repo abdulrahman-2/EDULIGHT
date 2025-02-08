@@ -1,6 +1,10 @@
+import { Revenue } from "@/components/layout/dashboard/charts/Revenue";
 import { Card } from "@/components/ui/card";
+import { CustomSelect } from "@/components/common/CustomSelect";
 import { dashInfo } from "@/constants";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { AiOutlineMessage } from "react-icons/ai";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Dashboard = () => {
   return (
@@ -25,6 +29,33 @@ const Dashboard = () => {
             </div>
           </Card>
         ))}
+      </div>
+      <div className="my-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="col-span-full md:col-span-1">
+          <Card>
+            <div className="flex items-center justify-between py-4 px-5 border-b border-gray-600">
+              <h3 className="text-lg font-semibold">Recent Activity</h3>
+              <CustomSelect items={["Today", "Week", "Month", "Year"]} />
+            </div>
+            <ScrollArea className="h-[440px] py-4 px-5">
+              {Array.from({ length: 9 }).map((_, index) => (
+                <div key={index} className="flex gap-3 mt-5">
+                  <AiOutlineMessage className="text-white rounded-full size-8 p-2 bg-primary" />
+                  <div className="flex flex-col gap-1">
+                    <p className="max-w-md font-medium">
+                      <b>Kevin</b> comments on your lecture “What is ux” in
+                      “2021 ui/ux design with figma”
+                    </p>
+                    <span className="text-xs text-gray-400">Just now</span>
+                  </div>
+                </div>
+              ))}
+            </ScrollArea>
+          </Card>
+        </div>
+        <div className="col-span-full md:col-span-2">
+          <Revenue />
+        </div>
       </div>
     </div>
   );

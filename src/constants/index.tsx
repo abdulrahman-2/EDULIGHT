@@ -18,7 +18,7 @@ export const links: Links[] = [
   },
   {
     id: 2,
-    label: "Create New Course",
+    label: "Create Course",
     url: "/create-course",
     icon: <IoAddCircleOutline />,
   },
