@@ -25,7 +25,7 @@ const Navbar = () => {
         />
         <Image src={logo} width={50} height={50} alt="logo" />
       </div>
-      <Search />
+      <Search placeholder="Search..." />
       <div className="flex items-center gap-2">
         <ModeToggle />
         <Avatar />

@@ -35,7 +35,10 @@ const Dashboard = () => {
           <Card>
             <div className="flex items-center justify-between py-4 px-5 border-b border-gray-600">
               <h3 className="text-lg font-semibold">Recent Activity</h3>
+              <div className="w-[180px]">
+
               <CustomSelect items={["Today", "Week", "Month", "Year"]} />
+              </div>
             </div>
             <ScrollArea className="h-[440px] py-4 px-5">
               {Array.from({ length: 9 }).map((_, index) => (
