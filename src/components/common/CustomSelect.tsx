@@ -15,8 +15,8 @@ interface SelectProps {
 
 export function CustomSelect({ items }: SelectProps) {
   return (
-    <Select>
-      <SelectTrigger className="w-[180px]">
+    <Select >
+      <SelectTrigger className="w-full">
         <SelectValue placeholder={items[0]} />
       </SelectTrigger>
       <SelectContent>
