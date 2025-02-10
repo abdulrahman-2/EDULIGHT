@@ -50,9 +50,9 @@ const Sidebar = () => {
   return (
     <div
       ref={sidebarRef}
-      className={`shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px] ${
+      className={`fixed top-0 min-h-screen shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px] ${
         isOpen
-          ? "flex w-[270px] bg-background absolute z-50 inset-0"
+          ? "flex w-[270px] bg-background fixed z-50"
           : "hidden dark:bg-primary/10"
       }`}
     >

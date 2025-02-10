@@ -31,8 +31,10 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
-            <main className="h-screen flex">
-              <Sidebar />
+            <main className="min-h-screen flex">
+              <div className="min-h-screen shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px]">
+                <Sidebar />
+              </div>
               <div className="flex-1">
                 <Navbar />
                 <div className="p-3 bg-primary/10 dark:bg-background ">
