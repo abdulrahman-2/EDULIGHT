@@ -37,7 +37,7 @@ export default function DashboardLayout({
               </div>
               <div className="flex-1">
                 <Navbar />
-                <div className="p-3 bg-primary/10 dark:bg-background ">
+                <div className="p-3 bg-primary/10 dark:bg-background h-[calc(100vh-60px)]">
                   {children}
                 </div>
               </div>

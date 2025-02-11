@@ -43,6 +43,14 @@ const Sidebar = () => {
     }
   }, [isMobileDevice, isOpen, dispatch]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  });
+
   if (!mounted) {
     return null; // or a loading spinner
   }
