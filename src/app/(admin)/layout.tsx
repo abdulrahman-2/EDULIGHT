@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import Sidebar from "@/components/layout/dashboard/Sidebar";
 import Navbar from "@/components/layout/dashboard/Navbar";
 import StoreProvider from "@/components/layout/StoreProvider";
+import SidebarLayout from "@/components/layout/SidebarLayout";
+import { menus } from "@/constants";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,13 +32,11 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
-            <div className="min-h-screen flex">
-              <div className="min-h-screen shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px]">
-                <Sidebar />
-              </div>
+            <div className="flex">
+              <SidebarLayout menus={menus} />
               <div className="flex-1">
                 <Navbar />
-                <div className="p-3 bg-primary/10 dark:bg-background h-[calc(100vh-60px)]">
+                <div className="p-3 sm:p-5 bg-primary/10 dark:bg-background">
                   {children}
                 </div>
               </div>

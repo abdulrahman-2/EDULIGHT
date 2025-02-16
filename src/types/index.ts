@@ -1,7 +1,6 @@
 export type Links = {
-  id: number;
-  label: string;
-  url: string;
+  name: string;
+  link: string;
   icon: React.ReactElement;
 };
 

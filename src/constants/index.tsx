@@ -1,6 +1,5 @@
 import { IoAddCircleOutline, IoStatsChart } from "react-icons/io5";
 import { RiStackLine } from "react-icons/ri";
-import { AiOutlineMessage } from "react-icons/ai";
 import courseImage from "../assets/das-images/Course Images.png";
 
 import {
@@ -17,44 +16,19 @@ import {
   PiUsersDuotone,
 } from "react-icons/pi";
 import { CourseCardContent, DashInfo, Links } from "@/types";
+import { LogOutIcon } from "lucide-react";
 
-export const links: Links[] = [
+export const menus: Links[] = [
+  { name: "Dashboard", link: "/dashboard", icon: <IoStatsChart /> },
   {
-    id: 1,
-    label: "Dashboard",
-    url: "/dashboard",
-    icon: <IoStatsChart />,
-  },
-  {
-    id: 2,
-    label: "Create Course",
-    url: "/create-course",
+    name: "Create Course",
+    link: "/create-course",
     icon: <IoAddCircleOutline />,
   },
-  {
-    id: 3,
-    label: "My Courses",
-    url: "/courses",
-    icon: <RiStackLine />,
-  },
-  {
-    id: 4,
-    label: "Earning",
-    url: "/earning",
-    icon: <PiCreditCardBold />,
-  },
-  {
-    id: 5,
-    label: "Message",
-    url: "/message",
-    icon: <AiOutlineMessage />,
-  },
-  {
-    id: 6,
-    label: "Setting",
-    url: "/setting",
-    icon: <PiGear />,
-  },
+  { name: "My Courses", link: "/courses", icon: <RiStackLine /> },
+  { name: "Earning", link: "/earning", icon: <PiCreditCardBold /> },
+  { name: "Setting", link: "/setting", icon: <PiGear /> },
+  { name: "Logout", link: "/logout", icon: <LogOutIcon /> },
 ];
 
 export const dashInfo: DashInfo[] = [
@@ -88,103 +62,108 @@ export const dashInfo: DashInfo[] = [
   },
 ];
 
-
 export const courseContent: CourseCardContent[] = [
   {
     id: 1,
-    image:courseImage ,
+    image: courseImage,
     category: "Web Development",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc:'description of the course',
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
     rating: "4.5",
     students: "1,674,767",
-    price: "$19.99",},
+    price: "$19.99",
+  },
   {
     id: 2,
     image: courseImage,
     category: "Web Development",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc:'description of the course',
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
     rating: "4.5",
     students: "1,674,767",
-    price: "$19.99",},
+    price: "$19.99",
+  },
   {
     id: 3,
     image: courseImage,
     category: "Web Development",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc:'description of the course',
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
     rating: "4.5",
     students: "1,674,767",
-    price: "$19.99",},
+    price: "$19.99",
+  },
   {
     id: 4,
     image: courseImage,
     category: "Web Development",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc:'description of the course',
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
     rating: "4.5",
     students: "1,674,767",
-    price: "$19.99",},
-]
+    price: "$19.99",
+  },
+];
 
-
-
-export const courseDetailsCard : DashInfo[] = [
+export const courseDetailsCard: DashInfo[] = [
   {
     id: 1,
     title: "Beginners",
     value: "Course level",
-    bgColor: '#E1F7E3',
-    color : "#23BD33",
+    bgColor: "#E1F7E3",
+    color: "#23BD33",
     icon: <PiChartBarHorizontalDuotone />,
   },
   {
     id: 2,
     title: "1,957",
     value: "Lecture (219.3 GB)",
-    bgColor:'#FFEEE8',
-    color : "#293897",
+    bgColor: "#FFEEE8",
+    color: "#293897",
     icon: <PiPlayCircleDuotone />,
   },
   {
     id: 3,
     title: "142",
     value: "Attach File (14.4 GB)",
-    bgColor:' #FFF2E5',
-    color : "#FD8E1F",
+    bgColor: " #FFF2E5",
+    color: "#FD8E1F",
     icon: <PiNotebookDuotone />,
   },
   {
     id: 4,
     title: "9,419,418",
     value: "Students enrolled",
-    bgColor:"#FFF0F0",
-    color : "#E34444",
-    icon:<PiUsersDuotone />,
+    bgColor: "#FFF0F0",
+    color: "#E34444",
+    icon: <PiUsersDuotone />,
   },
   {
     id: 5,
     title: "76,395,167",
     value: "Students viewed",
-    bgColor:'#F5F7FA',
-    color : "#1D2026",
+    bgColor: "#F5F7FA",
+    color: "#1D2026",
     icon: <PiTrophyDuotone />,
   },
   {
     id: 6,
     title: "English",
     value: "Course Language",
-    bgColor:"#F5F7FA",
-    color : "#1D2026",
+    bgColor: "#F5F7FA",
+    color: "#1D2026",
     icon: <PiNotepadDuotone />,
   },
   {
     id: 7,
     title: "19:37:51",
     value: "Hours",
-    bgColor:"#EBEBFF",
-    color : "#564FFD",
+    bgColor: "#EBEBFF",
+    color: "#564FFD",
     icon: <PiClockDuotone />,
-  }
-]
+  },
+];
