@@ -22,8 +22,8 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased`}>
+    <main lang="en" suppressHydrationWarning>
+      <div className={`${poppins.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,7 +31,7 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
-            <main className="min-h-screen flex">
+            <div className="min-h-screen flex">
               <div className="min-h-screen shadow-lg border-r dark:border-gray-600 shadow-primary/20 sm:flex sm:w-[70px] md:w-[220px] lg:w-[270px]">
                 <Sidebar />
               </div>
@@ -41,10 +41,10 @@ export default function DashboardLayout({
                   {children}
                 </div>
               </div>
-            </main>
+            </div>
           </StoreProvider>
         </ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </main>
   );
 }

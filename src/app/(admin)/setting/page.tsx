@@ -1,43 +1,64 @@
 "use client";
 
 import FormGenerator from "@/components/forms/useFormGenerator";
-import { z } from "zod";
-
-const formInputs = [
-  { name: "username", label: "Username", placeholder: "Enter username" },
-  { name: "email", label: "Email", type: "text", placeholder: "Enter email" },
-  {
-    name: "password",
-    label: "Password",
-    type: "password",
-    placeholder: "Enter password",
-  },
-];
-
-// Define schema here or in a client-imported module
-const validationSchema = z.object({
-  username: z.string().min(2, "Username must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
+import Image from "next/image";
+import courseImage from "@/assets/das-images/Course Images.png";
+import { Button } from "@/components/ui/button";
+import { settingSchema } from "@/schema";
+import { settingInputs } from "@/constants/formInputs";
 
 const Setting = () => {
   const handleFormSubmit = (data: {
+    image: any;
     username: string;
-    email: string;
-    password: string;
+    oldPassword: string;
+    newPassword: string;
   }) => {
     console.log("Form Data:", data);
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
-      <FormGenerator
-        inputs={formInputs}
-        schema={validationSchema}
-        onSubmit={handleFormSubmit}
-      />
-    </div>
+    <>
+      <h1 className="my-5 text-3xl font-semibold">Settings</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="bg-white dark:bg-primary/10 p-3 sm:p-5 rounded-lg col-span-full lg:col-span-2 ">
+          <h2 className="text-2xl font-semibold">Edit Your Profile</h2>
+          <FormGenerator
+            inputs={settingInputs}
+            schema={settingSchema}
+            onSubmit={handleFormSubmit}
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 text-center bg-white dark:bg-primary/10 p-3 sm:p-5 rounded-lg col-span-full lg:col-span-1">
+          <h2 className="text-2xl font-semibold">Mohamed Ahmed</h2>
+          <h3 className="text-gray-600 dark:text-gray-400">
+            example@example.com
+          </h3>
+          <div className="relative w-[150px] h-[150px] mx-auto">
+            <Image
+              src={courseImage}
+              fill
+              alt="logo"
+              className="absolute object-cover rounded-full"
+            />
+          </div>
+          <Button variant={"destructive"} className="font-semibold">
+            Delete Account
+          </Button>
+          <p className="text-gray-600 dark:text-gray-400">
+            Once you delete your account, there is no going back. Please be
+            certain.
+          </p>
+
+          <p className="font-semibold">
+            <span className="font-normal text-gray-600 dark:text-gray-400">
+              Member since:
+            </span>{" "}
+            Jan 21, 2020
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 

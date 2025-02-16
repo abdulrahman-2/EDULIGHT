@@ -19,8 +19,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased`}>
+    <main lang="en" suppressHydrationWarning>
+      <div className={`${poppins.className} antialiased`}>
         Auth
         <ThemeProvider
           attribute="class"
@@ -30,7 +30,7 @@ export default function AuthLayout({
         >
           {children}
         </ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </main>
   );
 }

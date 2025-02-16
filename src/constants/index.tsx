@@ -1,4 +1,4 @@
-import { IoAddCircleOutline, IoPlayCircleOutline, IoStatsChart } from "react-icons/io5";
+import { IoAddCircleOutline, IoStatsChart } from "react-icons/io5";
 import { RiStackLine } from "react-icons/ri";
 import { AiOutlineMessage } from "react-icons/ai";
 import courseImage from "../assets/das-images/Course Images.png";
@@ -17,7 +17,6 @@ import {
   PiUsersDuotone,
 } from "react-icons/pi";
 import { CourseCardContent, DashInfo, Links } from "@/types";
-import { MdBarChart } from "react-icons/md";
 
 export const links: Links[] = [
   {

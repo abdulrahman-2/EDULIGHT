@@ -20,8 +20,8 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased`}>
+    <main lang="en" suppressHydrationWarning>
+      <div className={`${poppins.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -33,7 +33,7 @@ export default function HomeLayout({
             {children}
           </StoreProvider>
         </ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </main>
   );
 }

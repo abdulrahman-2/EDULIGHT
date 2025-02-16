@@ -2,7 +2,7 @@ import { courseContent, courseDetailsCard } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import person from "@/assets/das-images/person.png";
-import { FaRegStar, FaStar, FaStarHalf } from "react-icons/fa6";
+import { FaRegStar, FaStar } from "react-icons/fa6";
 import { Card } from "@/components/ui/card";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { CustomSelect } from "@/components/common/CustomSelect";
@@ -19,7 +19,7 @@ const Page = ({ params }: { params: { id: string } }) => {
     return <div>Course not found</div>;
   }
 
-  const { image, title, desc, price, category, rating, students } =
+  const { image, title, desc, price, category, rating } =
     filteredCourse;
 
   return (
@@ -104,7 +104,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mt-5">
         {/* cards  */}
         <div className="col-span-full lg:col-span-1">
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4  ">
