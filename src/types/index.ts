@@ -26,3 +26,11 @@ export type CourseCardContent = {
 };
 
 
+export type TableData = {
+
+  id: number;
+  status: string;
+  method: string;
+  amount: string;
+  date: string;
+}

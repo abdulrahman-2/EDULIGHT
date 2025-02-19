@@ -12,8 +12,9 @@ import { cn } from "@/lib/utils";
 
 interface SelectProps {
   items: string[];
-  value: string;
-  onChange: (value: string) => void;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
   className?: string; 
 }
 
@@ -22,11 +23,12 @@ export function CustomSelect({
   value,
   onChange,
   className,
+  placeholder
 }: SelectProps) {
   return (
     <Select onValueChange={onChange} value={value}>
       <SelectTrigger className={cn("w-full", className)}>
-        <SelectValue placeholder="Select an option" />
+      <SelectValue placeholder={placeholder ? placeholder : "Select an option"} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

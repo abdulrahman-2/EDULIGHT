@@ -6,16 +6,18 @@ import {
   PiChartBarHorizontalDuotone,
   PiClockDuotone,
   PiCreditCardBold,
+  PiCrownSimpleDuotone,
   PiGear,
   PiNotebookDuotone,
   PiNotepadDuotone,
   PiNotepadLight,
   PiPlayCircleDuotone,
+  PiReceiptDuotone,
   PiTrophyDuotone,
   PiUserCircle,
   PiUsersDuotone,
 } from "react-icons/pi";
-import { CourseCardContent, DashInfo, Links } from "@/types";
+import { CourseCardContent, DashInfo, Links, TableData } from "@/types";
 import { LogOutIcon } from "lucide-react";
 
 export const menus: Links[] = [
@@ -167,3 +169,92 @@ export const courseDetailsCard: DashInfo[] = [
     icon: <PiClockDuotone />,
   },
 ];
+
+
+
+export const earningCard: DashInfo[] = [
+  {
+    id: 1,
+    title: "Total Revenue",
+    value: "$7,461,767",
+    icon: <RiStackLine />,
+    bgColor:"#FFEEE8",
+    color: "#293897",
+  },
+  {
+    id: 2,
+    title: "Current Balance",
+    value: "$16,593.00",
+    icon: <PiReceiptDuotone />,
+    bgColor:"#EBEBFF",
+    color:"#564FFD"
+  },
+  {
+    id: 3,
+    title: "Total Withdrawals",
+    value: "$7,461,767",
+    icon: <PiCreditCardBold />,
+    bgColor:"#FFF0F0",
+    color:"#E34444"
+  },
+  {
+    id: 4,
+    title: "Today Revenue",
+    value: "$162.000",
+    icon: <PiCrownSimpleDuotone />,
+    bgColor:"#E1F7E3",
+    color:"#23BD33"
+  }
+
+];
+
+export const tableData:TableData[] = [
+{
+  id:1,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Mastercards",
+  amount:'American Express',
+  status:"Pending",
+},
+{
+  id:2,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Visa",
+  amount:'American Express',
+  status:"Pending",
+},
+{
+  id:3,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Visa",
+  amount:'American Express',
+  status:"Pending",
+},
+{
+  id:4,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Mastercards",
+  amount:'American Express',
+  status:"Completed",
+},
+{
+  id:5,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Visa",
+  amount:'American Express',
+  status:"Cansled",
+},
+{
+  id:6,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Visa",
+  amount:'American Express',
+  status:"Completed",
+},
+{
+  id:7,
+  date:"21 Sep, 2021 at 2:14 AM",
+  method:"Mastercards",
+  amount:'American Express',
+  status:"Completed",
+},]
