@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,17 +19,7 @@ export default function AuthLayout({
 }>) {
   return (
     <main lang="en" suppressHydrationWarning>
-      <div className={`${poppins.className} antialiased`}>
-        Auth
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </div>
+      <div className={`${poppins.className} antialiased`}>{children}</div>
     </main>
   );
 }

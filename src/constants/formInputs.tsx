@@ -78,5 +78,62 @@ const CreateCourseInputs = [
   },
 ];
 
+const signUpInputs = [
+  {
+    name: "fullName",
+    label: "Full Name",
+    type: "text",
+    placeholder: "Full Name",
+    className: "col-span-2",
+  },
+  {
+    name: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Email",
+    className: "col-span-2",
+  },
+  {
+    fields: [
+      {
+        name: "password",
+        label: "Password",
+        type: "password",
+        placeholder: "Password",
+        className: "col-span-1",
+      },
+      {
+        name: "confirmPassword",
+        label: "Confirm Password",
+        type: "password",
+        placeholder: "Confirm Password",
+        className: "col-span-1",
+      },
+    ],
+  },
+  {
+    name: "image",
+    label: "Profile Picture",
+    type: "file",
+    className: "col-span-2",
+  },
+];
 
-export { settingInputs, CreateCourseInputs };
+const loginInputs = [
+  {
+    name: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Email",
+    className: "col-span-2",
+  },
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "Password",
+    className: "col-span-2",
+  },
+];
+
+export { settingInputs, CreateCourseInputs, signUpInputs, loginInputs };

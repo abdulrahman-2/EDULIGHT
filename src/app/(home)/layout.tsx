@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import StoreProvider from "@/components/layout/StoreProvider";
 
 const poppins = Poppins({
@@ -22,17 +21,10 @@ export default function HomeLayout({
   return (
     <main lang="en" suppressHydrationWarning>
       <div className={`${poppins.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StoreProvider>
-            User
-            {children}
-          </StoreProvider>
-        </ThemeProvider>
+        <StoreProvider>
+          User
+          {children}
+        </StoreProvider>
       </div>
     </main>
   );
