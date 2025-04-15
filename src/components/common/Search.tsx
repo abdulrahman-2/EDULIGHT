@@ -6,7 +6,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
       <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2" />
       <Input
         placeholder={placeholder}
-        className="pl-8 dark:border-gray-600 rounded-lg"
+        className="w-full pl-8 dark:border-gray-600 rounded-lg"
       />
     </div>
   );

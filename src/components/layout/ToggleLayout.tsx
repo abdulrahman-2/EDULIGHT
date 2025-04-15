@@ -8,7 +8,7 @@ import { LucideMenu } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useClickOutside } from "@/hooks/use-click-outside";
 
-const ToggleLayout = ({ menus }: any) => {
+const ToggleLayout =({ menus, className }: { menus: any; className?: string })=> {
   const { isOpen } = useSelector((state: any) => state.sidebar);
   const dispatch = useDispatch();
 
@@ -31,7 +31,7 @@ const ToggleLayout = ({ menus }: any) => {
   });
 
   return (
-    <>
+    <div className={className}>
       {/* Menu Button (Shown Only on Small Screens) */}
       <div>
         <LucideMenu
@@ -68,7 +68,7 @@ const ToggleLayout = ({ menus }: any) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

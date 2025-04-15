@@ -1,6 +1,17 @@
 import { IoAddCircleOutline, IoStatsChart } from "react-icons/io5";
 import { RiStackLine } from "react-icons/ri";
 import courseImage from "../assets/das-images/Course Images.png";
+import instructorImage from "@/assets/das-images/person.png";
+import instructorCardImage from "@/assets/home-images/instructor.png";
+
+import netflix from "@/assets/home-images/netflix.png";
+import youtube from "@/assets/home-images/youtube.png";
+import google from "@/assets/home-images/google.png";
+import lenovo from "@/assets/home-images/lenovo.png";
+import slack from "@/assets/home-images/slack.png";
+import verizon from "@/assets/home-images/verizon.png";
+import lexmark from "@/assets/home-images/lexmark.png";
+import microsoft from "@/assets/home-images/microsoft.png";
 
 import {
   PiChartBarHorizontalDuotone,
@@ -11,14 +22,34 @@ import {
   PiNotebookDuotone,
   PiNotepadDuotone,
   PiNotepadLight,
+  PiPenNib,
   PiPlayCircleDuotone,
   PiReceiptDuotone,
   PiTrophyDuotone,
   PiUserCircle,
   PiUsersDuotone,
 } from "react-icons/pi";
-import { CourseCardContent, DashInfo, Links, TableData } from "@/types";
+import {
+  CompaniesLogos,
+  CourseCardContent,
+  DashInfo,
+  FeaturedCourses,
+  FooterLinks,
+  HomeCategories,
+  HomeNavItems,
+  Links,
+  SocialLinks,
+  TableData,
+  TechAndEarn,
+} from "@/types";
 import { LogOutIcon } from "lucide-react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export const menus: Links[] = [
   { name: "Dashboard", link: "/dashboard", icon: <IoStatsChart /> },
@@ -109,6 +140,72 @@ export const courseContent: CourseCardContent[] = [
     students: "1,674,767",
     price: "$19.99",
   },
+  {
+    id: 5,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 6,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 7,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 8,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 9,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 10,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
 ];
 
 export const courseDetailsCard: DashInfo[] = [
@@ -170,15 +267,13 @@ export const courseDetailsCard: DashInfo[] = [
   },
 ];
 
-
-
 export const earningCard: DashInfo[] = [
   {
     id: 1,
     title: "Total Revenue",
     value: "$7,461,767",
     icon: <RiStackLine />,
-    bgColor:"#FFEEE8",
+    bgColor: "#FFEEE8",
     color: "#293897",
   },
   {
@@ -186,75 +281,411 @@ export const earningCard: DashInfo[] = [
     title: "Current Balance",
     value: "$16,593.00",
     icon: <PiReceiptDuotone />,
-    bgColor:"#EBEBFF",
-    color:"#564FFD"
+    bgColor: "#EBEBFF",
+    color: "#564FFD",
   },
   {
     id: 3,
     title: "Total Withdrawals",
     value: "$7,461,767",
     icon: <PiCreditCardBold />,
-    bgColor:"#FFF0F0",
-    color:"#E34444"
+    bgColor: "#FFF0F0",
+    color: "#E34444",
   },
   {
     id: 4,
     title: "Today Revenue",
     value: "$162.000",
     icon: <PiCrownSimpleDuotone />,
-    bgColor:"#E1F7E3",
-    color:"#23BD33"
-  }
-
+    bgColor: "#E1F7E3",
+    color: "#23BD33",
+  },
 ];
 
-export const tableData:TableData[] = [
-{
-  id:1,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Mastercards",
-  amount:'American Express',
-  status:"Pending",
-},
-{
-  id:2,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Visa",
-  amount:'American Express',
-  status:"Pending",
-},
-{
-  id:3,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Visa",
-  amount:'American Express',
-  status:"Pending",
-},
-{
-  id:4,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Mastercards",
-  amount:'American Express',
-  status:"Completed",
-},
-{
-  id:5,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Visa",
-  amount:'American Express',
-  status:"Cansled",
-},
-{
-  id:6,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Visa",
-  amount:'American Express',
-  status:"Completed",
-},
-{
-  id:7,
-  date:"21 Sep, 2021 at 2:14 AM",
-  method:"Mastercards",
-  amount:'American Express',
-  status:"Completed",
-},]
+export const tableData: TableData[] = [
+  {
+    id: 1,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Mastercards",
+    amount: "American Express",
+    status: "Pending",
+  },
+  {
+    id: 2,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Visa",
+    amount: "American Express",
+    status: "Pending",
+  },
+  {
+    id: 3,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Visa",
+    amount: "American Express",
+    status: "Pending",
+  },
+  {
+    id: 4,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Mastercards",
+    amount: "American Express",
+    status: "Completed",
+  },
+  {
+    id: 5,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Visa",
+    amount: "American Express",
+    status: "Cansled",
+  },
+  {
+    id: 6,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Visa",
+    amount: "American Express",
+    status: "Completed",
+  },
+  {
+    id: 7,
+    date: "21 Sep, 2021 at 2:14 AM",
+    method: "Mastercards",
+    amount: "American Express",
+    status: "Completed",
+  },
+];
+
+// website fake data -----------------
+export const homeNavItems: HomeNavItems[] = [
+  {
+    id: 1,
+    title: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "Courses",
+    link: "/home-courses",
+  },
+  {
+    id: 3,
+    title: "Roadmaps",
+    link: "/roadmaps",
+  },
+  {
+    id: 4,
+    title: "Exams",
+    link: "/exams",
+  },
+  {
+    id: 5,
+    title: "About",
+    link: "/about",
+  },
+  {
+    id: 6,
+    title: "Contact",
+    link: "/contact",
+  },
+  {
+    id: 7,
+    title: "Become an Instructor",
+    link: "/instructor",
+  },
+  {
+    id: 8,
+    title: "Become a Company",
+    link: "/company",
+  },
+];
+
+export const homeCategories: HomeCategories[] = [
+  {
+    id: 1,
+    category: "Business",
+    link: "/business",
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+  {
+    id: 2,
+    category: "Business",
+    link: "/business",
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+  {
+    id: 3,
+    category: "Business",
+    link: "/business",
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+  {
+    id: 4,
+    category: "Business",
+    link: "/business",
+
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+  {
+    id: 5,
+    category: "Business",
+    link: "/business",
+
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+  {
+    id: 6,
+    category: "Business",
+    link: "/business",
+
+    coursesCount: "52,822 Courses",
+    icon: <PiPenNib />,
+    bgColor: "#EAEBF5",
+  },
+];
+
+export const featuredCourses: FeaturedCourses[] = [
+  {
+    id: 1,
+    image: courseImage,
+    title: "The Complete JavaScript Course 2022: From Zero to Expert!",
+    link: "/course-details",
+    instructor: "Traversy Media",
+    level: "Beginner",
+    hours: "10 hours",
+    category: "JavaScript",
+    rating: "4.9",
+    students: "550.4K",
+    price: "$12.99",
+    oldPrice: "$19.99",
+    ratingCount: "50,000",
+    instructorImage: instructorImage,
+  },
+  {
+    id: 2,
+    image: courseImage,
+    title: "The Complete JavaScript Course 2022: From Zero to Expert!",
+    link: "/course-details",
+    instructor: "Traversy Media",
+    level: "Beginner",
+    hours: "10 hours",
+    category: "JavaScript",
+    rating: "4.9",
+    students: "50,000",
+    price: "$12.99",
+    oldPrice: "$19.99",
+    ratingCount: "50,000",
+    instructorImage: instructorImage,
+  },
+  {
+    id: 3,
+    instructorImage: instructorImage,
+    image: courseImage,
+    title: "The Complete JavaScript Course 2022: From Zero to Expert!",
+    link: "/course-details",
+    instructor: "Traversy Media",
+    level: "Beginner",
+    hours: "10 hours",
+    category: "JavaScript",
+    rating: "4.9",
+    students: "50,000",
+    price: "$12.99",
+    oldPrice: "$19.99",
+    ratingCount: "50,000",
+  },
+  {
+    id: 4,
+    image: courseImage,
+    title: "The Complete JavaScript Course 2022: From Zero to Expert!",
+    link: "/course-details",
+    instructor: "Traversy Media",
+    level: "Beginner",
+    hours: "10 hours",
+    category: "JavaScript",
+    rating: "4.9",
+    students: "50,000",
+    price: "$12.99",
+    instructorImage: instructorImage,
+    oldPrice: "$19.99",
+    ratingCount: "50,000",
+  },
+];
+
+export const techAndEarn: TechAndEarn[] = [
+  {
+    id: 1,
+    bgColor: "#EBEBFF",
+    textColor: "#564FFD",
+    title: "Apply to become instructor",
+  },
+  {
+    id: 2,
+    bgColor: "#FFF0F0",
+    textColor: "#293897",
+    title: "Build & edit your profile",
+  },
+  {
+    id: 3,
+    bgColor: "#FFF0F0",
+    textColor: "#E34444",
+    title: "Create your new course",
+  },
+  {
+    id: 4,
+    bgColor: "#E1F7E3",
+    textColor: "#23BD33",
+    title: "Start teaching & earning",
+  },
+];
+export const instructorInfo: CourseCardContent[] = [
+  {
+    id: 1,
+    image: instructorCardImage,
+    category: "Digital Product Designer",
+    title: "Darrell Steward",
+    rating: "4.9",
+    students: "50,000",
+  },
+  {
+    id: 2,
+    image: instructorCardImage,
+    category: "Digital Product Designer",
+    title: "Darrell Steward",
+    rating: "4.9",
+    students: "50,000",
+  },
+  {
+    id: 3,
+    image: instructorCardImage,
+    category: "Digital Product Designer",
+    title: "Darrell Steward",
+    rating: "4.9",
+    students: "50,000",
+  },
+  {
+    id: 4,
+    image: instructorCardImage,
+    category: "Digital Product Designer",
+    title: "Darrell Steward",
+    rating: "4.9",
+    students: "50,000",
+  },
+  {
+    id: 5,
+    image: instructorCardImage,
+    category: "Digital Product Designer",
+    title: "Darrell Steward",
+    rating: "4.9",
+    students: "50,000",
+  },
+];
+export const companiesLogos: CompaniesLogos[] = [
+  { id: 1, image: netflix },
+  {
+    id: 2,
+    image: youtube,
+  },
+  {
+    id: 3,
+    image: google,
+  },
+  {
+    id: 4,
+    image: lenovo,
+  },
+  {
+    id: 5,
+    image: slack,
+  },
+  {
+    id: 6,
+    image: verizon,
+  },
+  {
+    id: 7,
+    image: lexmark,
+  },
+  {
+    id: 8,
+    image: microsoft,
+  },
+];
+export const socialLinks: SocialLinks[] = [
+  {
+    id: 1,
+    link: "https://www.facebook.com/",
+    icon: <FaFacebook />,
+    bgColor: "#1877f2",
+    name: "facebook",
+  },
+  {
+    id: 2,
+    link: "https://www.instagram.com/",
+    icon: <FaInstagram />,
+    bgColor: "#c32aa3",
+    name: "insta",
+  },
+  {
+    id: 3,
+    link: "https://www.linkedin.com/",
+    icon: <FaLinkedin />,
+    bgColor: "#0a66c2",
+    name: "linkedin",
+  },
+  {
+    id: 4,
+    link: "https://www.twitter.com/",
+
+    icon: <FaTwitter />,
+    bgColor: "#1da1f2",
+    name: "twitter",
+  },
+  {
+    id: 5,
+    link: "https://www.youtube.com/",
+    icon: <FaYoutube />,
+    bgColor: "#ff0000",
+    name: "youtube",
+  },
+];
+
+export const footerLinks: FooterLinks[] = [
+  {
+    id: 1,
+    groupTitle: "Top 4 Category",
+    links: [
+      { id: 1, title: "Development", link: "/" },
+      { id: 2, title: "Finance & Accounting", link: "/" },
+      { id: 3, title: "Design", link: "/" },
+      { id: 4, title: "Business", link: "/" },
+    ],
+  },
+  {
+    id: 2,
+    groupTitle: "Quick Links",
+    links: [
+      { id: 1, title: "About", link: "/about" },
+      { id: 2, title: "Become an Instructor", link: "/instructor" },
+      { id: 3, title: "Contact", link: "/contact" },
+      { id: 4, title: "Career", link: "/career" },
+    ],
+  },
+  {
+    id: 3,
+    groupTitle: "Support",
+    links: [
+      { id: 1, title: "Help Center", link: "/help" },
+      { id: 2, title: "FAQs", link: "/faqa" },
+      { id: 3, title: "Terms & Condition", link: "/terms" },
+      { id: 4, title: "Privacy Policy", link: "/privacy" },
+    ],
+  },
+];
