@@ -20,12 +20,12 @@ const CourseCard = () => {
     {courseContent.map((course) => (
      <Card key={course.id} className="overflow-hidden">
           <div  className="flex flex-col ">
-            <div className="relative h-[200px] w-full  ">
+            <div className="relative md:h-[170px] w-full  ">
               <Image
                 src={course.image}
                 alt={course.title}
                 fill
-                className="object-contian "
+                className="object-contain md:object-cover "
               />
             </div>
             <div className="  dark:bg-primary/10  ">

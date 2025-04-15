@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
 import StoreProvider from "@/components/layout/StoreProvider";
+import Header from "@/components/layout/home/header/Header";
+import Footer from "@/components/layout/home/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,8 +24,10 @@ export default function HomeLayout({
     <main lang="en" suppressHydrationWarning>
       <div className={`${poppins.className} antialiased`}>
         <StoreProvider>
-          User
+          {/* User */}
+          <Header />
           {children}
+          <Footer />
         </StoreProvider>
       </div>
     </main>

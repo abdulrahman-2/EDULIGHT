@@ -15,22 +15,74 @@ export type DashInfo = {
 };
 
 export type CourseCardContent = {
-  id:number;
-  image: string|any;
+  id: number;
+  image: string | any;
   category: string;
   title: string;
   desc?: string;
   rating: string;
   students: string;
-  price: string;
+  price?: string;
 };
 
-
 export type TableData = {
-
   id: number;
   status: string;
   method: string;
   amount: string;
   date: string;
-}
+};
+
+// website types -----------
+export type HomeNavItems = {
+  id: number;
+  title: string;
+  link: string;
+};
+export type HomeCategories = {
+  id: number;
+  coursesCount: string;
+  category: string;
+  icon: React.ReactElement;
+  link: string;
+  bgColor: string;
+};
+export type FeaturedCourses = {
+  id: number;
+  image: string | any;
+  category: string;
+  title: string;
+  rating: string;
+  students: string;
+  price: string;
+  link: string;
+  level: string;
+  instructor: string;
+  hours: string;
+  oldPrice: string;
+  ratingCount: string;
+  instructorImage: string | any;
+};
+export type TechAndEarn = {
+  id: number;
+  bgColor: string;
+  textColor: string;
+  title: string;
+};
+
+export type CompaniesLogos = {
+  id: number;
+  image: string | any;
+};
+export type SocialLinks = {
+  id: number;
+  link: string;
+  icon: React.ReactElement;
+  bgColor: string;
+  name: string;
+};
+export type FooterLinks = {
+  id: number;
+  groupTitle: string;
+  links: { id: number; title: string; link: string }[];
+};
