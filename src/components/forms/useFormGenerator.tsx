@@ -79,7 +79,7 @@ const FormGenerator = ({
         rows={input.rows || 4} // عدد الأسطر الافتراضي 4 ويمكن تعديله
         placeholder={input.placeholder || ""}
         className={cn(
-          "border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
+          "border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none",
           errors[input.name] ? "border-red-500" : "border-gray-300",
           className
         )}

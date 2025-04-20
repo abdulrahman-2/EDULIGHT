@@ -47,7 +47,7 @@ const Footer = () => {
               <div key={link.id} className="flex flex-col gap-4">
                 <h4 className="text-white font-semibold">{link.groupTitle}</h4>
                 {link.links.map((item) => (
-                   <div className="flex hover:border-b-2 pb-1 border-[#FF6636] items-center  group gap-2 w-fit">
+                   <div key={item.id} className="flex hover:border-b-2 pb-1 border-[#FF6636] items-center  group gap-2 w-fit">
                   <Link
                     href={item.link}
                     key={item.id}

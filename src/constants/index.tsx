@@ -3,7 +3,7 @@ import { RiStackLine } from "react-icons/ri";
 import courseImage from "../assets/das-images/Course Images.png";
 import instructorImage from "@/assets/das-images/person.png";
 import instructorCardImage from "@/assets/home-images/instructor.png";
-
+import { TbRosetteDiscountCheck } from "react-icons/tb";
 import netflix from "@/assets/home-images/netflix.png";
 import youtube from "@/assets/home-images/youtube.png";
 import google from "@/assets/home-images/google.png";
@@ -19,20 +19,27 @@ import {
   PiCreditCardBold,
   PiCrownSimpleDuotone,
   PiGear,
+  PiGlobeHemisphereWestDuotone,
+  PiHandshakeDuotone,
+  PiIdentificationCardDuotone,
+  PiNewspaperClippingDuotone,
   PiNotebookDuotone,
   PiNotepadDuotone,
   PiNotepadLight,
   PiPenNib,
   PiPlayCircleDuotone,
   PiReceiptDuotone,
+  PiStack,
   PiTrophyDuotone,
   PiUserCircle,
   PiUsersDuotone,
 } from "react-icons/pi";
 import {
+  AboutWords,
   CompaniesLogos,
   CourseCardContent,
   DashInfo,
+  Faqs,
   FeaturedCourses,
   FooterLinks,
   HomeCategories,
@@ -42,7 +49,7 @@ import {
   TableData,
   TechAndEarn,
 } from "@/types";
-import { LogOutIcon } from "lucide-react";
+import { LogOutIcon, PlayCircle } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
@@ -683,9 +690,138 @@ export const footerLinks: FooterLinks[] = [
     groupTitle: "Support",
     links: [
       { id: 1, title: "Help Center", link: "/help" },
-      { id: 2, title: "FAQs", link: "/faqa" },
+      { id: 2, title: "FAQs", link: "/faqs" },
       { id: 3, title: "Terms & Condition", link: "/terms" },
       { id: 4, title: "Privacy Policy", link: "/privacy" },
     ],
+  },
+];
+
+export const aboutInfo: DashInfo[] = [
+  {
+    id: 1,
+    title: "Students",
+    value: "67.3K",
+    icon: <PiUsersDuotone />,
+    color: "#293897",
+  },
+  {
+    id: 2,
+    title: "Certified Instructor",
+    value: "26K",
+    color: "#564FFD",
+    icon: <PiNotebookDuotone />,
+  },
+  {
+    id: 3,
+    title: "Country Language",
+    value: "72",
+    icon: <PiGlobeHemisphereWestDuotone />,
+    color: "#E34444",
+  },
+  {
+    id: 4,
+    title: "Success Rate",
+    value: "99.9%",
+    icon: <TbRosetteDiscountCheck />,
+    color: "#23BD33",
+  },
+  {
+    id: 5,
+    title: "Trusted Companies",
+    value: "57",
+    icon: <PiStack />,
+    color: "#FD8E1F",
+  },
+];
+
+export const aboutWords: AboutWords[] = [
+  {
+    id: 1,
+    job: "Chief Chairman of",
+    name: "Sundar Pichai",
+    company: "Google",
+    desc: "Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes them available to customers.",
+  },
+  {
+    id: 2,
+    job: "CEO of",
+    name: "Satya Nadella",
+    company: "Microsoft",
+    desc: "Edugaurd responds to the needs of the business in an agile and global manner. It’s truly the best solution for our employees and their careers.",
+  },
+  {
+    id: 3,
+    job: "Chief Executive Officer of",
+    name: "Ted Sarandos",
+    company: "Netflix",
+    desc: "In total, it was a big success, I would get emails about what a fantastic resource it was.",
+  },
+];
+
+export const faqs: Faqs[] = [
+  {
+    id: 1,
+    question: "What is Donec malesuada?",
+    answer:
+      "Aliquam semper tellus vel lacus rutrum mollis. Nunc vitae iaculis lacus, id fringilla leo. Nulla dictum, enim nec bibendum auctor, lorem mi rutrum urna, sed luctus urna nibh sit amet velit. Sed varius sem semper leo ultricies tincidunt. Etiam id ligula ut augue auctor molestie ut quis felis.",
+    category: "Donec malesuada",
+  },
+  {
+    id: 2,
+    question: "What is Quisque used for?",
+    answer: "Quisque helps organize and manage your content.",
+    category: "Quisque",
+  },
+  {
+    id: 3,
+    question: "Toqum info?",
+    answer: "Toqum is great for layout and performance.",
+    category: "Toqum, in accumsan",
+  },
+  {
+    id: 4,
+    question: "What is Ut sed orci?",
+    answer: "Ut sed orci is all about positioning and styling.",
+    category: "Ut sed orci",
+  },
+];
+
+export const instructorPageInfo: DashInfo[] = [
+  {
+    id: 1,
+    title: "1. Apply to become instructor.",
+    value:
+      "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.",
+    color: "#564FFD",
+    bgColor:"#564FFD1A",
+    icon: <PiNewspaperClippingDuotone />,
+  },
+  {
+    id: 2,
+    title: "2. Setup & edit your profile.",
+    value:
+      "Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.",
+    color: "#E34444",
+    bgColor:"#FFF0F0",
+    icon: <PiIdentificationCardDuotone />,
+  },
+  {
+    id: 3,
+    title: "3. Create your new course",
+    value:
+      "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque. ",
+    color: "#293897",
+    bgColor:"#EAEBF5",
+    icon: <PiPlayCircleDuotone />,
+  },
+  {
+    id: 4,
+    title: "4. Start teaching & earning",
+    value:
+      "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.  ",
+    color: "#23BD33",
+    bgColor: "#E1F7E3",
+    icon: <PiHandshakeDuotone />,
   },
 ];

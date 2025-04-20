@@ -17,7 +17,7 @@ const BottomNav = () => {
     <nav className=" flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8  ">
       <div className="flex items-center gap-8 ">
         <div className="flex items-center gap-1">
-          <ToggleLayout className="hover:text-primary" menus={homeNavItems} />
+          <ToggleLayout className="hover:text-primary block md:hidden" menus={homeNavItems} />
         <Image src={logo} width={150} height={40} alt="logo" />
         </div>
         <div className="flex items-center gap-2">
