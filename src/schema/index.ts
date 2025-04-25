@@ -52,4 +52,20 @@ const faqsSchema = z.object({
 const emailSchema = z.object({
   email: z.string().email("Invalid email address"),
 })
-export { CreateSchema, settingSchema, createAccountSchema, loginSchema, contactSchema,faqsSchema,emailSchema };
+
+const profileSettingSchema = z.object({
+  username: z.string().min(2, "name must be at least 2 characters"),
+  title: z.string().min(5, "Title must be at least 5 characters"),
+  image: z.any(),
+  lastName: z.string().min(2, "name must be at least 2 characters"),
+  firstName: z.string().min(2, "name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+})
+const changePasswordSchema = z.object({
+  currentPassword: z.string().min(6, "Password must be at least 6 characters"),
+  newPassword: z.string().min(6, "Password must be at least 6 characters"),
+  confirmPassword: z
+    .string()
+    .min(6, "Password must be at least 6 characters"),
+})
+export { CreateSchema, settingSchema, createAccountSchema, loginSchema, contactSchema,faqsSchema,emailSchema,profileSettingSchema,changePasswordSchema };

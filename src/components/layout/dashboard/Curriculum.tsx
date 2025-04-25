@@ -3,7 +3,6 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { BiEditAlt } from "react-icons/bi";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,8 +12,6 @@ import {
 import LecDialog from "./Dialogs/LecDialog";
 import AttachDialog from "./Dialogs/AttachDialog";
 import { Button } from "@/components/ui/button";
-import { date } from "zod";
-import { Edit } from "lucide-react";
 import EditSecDialog from "./Dialogs/EditSecDialog";
 import EditLecDialog from "./Dialogs/EditLecDialog";
 

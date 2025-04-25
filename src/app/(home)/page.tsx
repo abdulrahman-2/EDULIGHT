@@ -134,6 +134,7 @@ const Home = () => {
                 <Image
                   alt="start learning"
                   src={startLearning}
+                  loading="lazy"
                   fill
                   className="object-cover"
                 />
@@ -214,6 +215,7 @@ const Home = () => {
                     key={item.id}
                     src={item.image}
                     alt="company"
+                    loading="lazy"
                     width={100}
                     height={100}
                   />

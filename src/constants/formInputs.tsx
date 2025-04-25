@@ -199,5 +199,74 @@ const emailInputs = [
     className: "col-span-2",
   },
 ];
+const accountSettingsInputs = [
+  {
+    name: "image",
+    type: "file",
+    label: "Image",
+    className: "col-span-2",
 
-export { settingInputs, CreateCourseInputs, signUpInputs, loginInputs,contactInputs,faqsInputs,emailInputs };
+  },
+  {fields :[
+    {
+      name: "firstName",
+      label: "First Name",
+      type: "text",
+      placeholder: "First Name",
+      className: "col-span-1",
+    },
+    {
+      name: "lastName",
+      label: "Last Name",
+      type: "text",
+      placeholder: "Last Name",
+      className: "col-span-1",
+    },
+  ]},
+  {
+    name: "username",
+    label: "Username",
+    type: "text",
+    placeholder: "Username",
+    className: "col-span-2",
+  },
+  {
+    name: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Email Address",
+    className: "col-span-2",
+  },
+  {
+    name:"title",
+    label:"Title",
+    type:"text",
+    placeholder:"Your tittle, proffesion or small biography",
+    className:"col-span-2"
+  }
+]
+const accountPasswordInputs = [
+  {
+name:"currentPassword",
+label:"Current Password",
+type:"password",
+placeholder:"Password",
+className:"col-span-2"
+  },
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "Password",
+    className: "col-span-2",
+  },
+  {
+    name: "confirmPassword",
+    label: "Confirm Password",
+    type: "password",
+    placeholder: "Confirm new Password",
+    className: "col-span-2",
+  },
+];
+
+export { settingInputs, CreateCourseInputs, signUpInputs, loginInputs,contactInputs,faqsInputs,emailInputs,accountSettingsInputs,accountPasswordInputs };

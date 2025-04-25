@@ -50,6 +50,7 @@ const page = () => {
           paragraph="Want to chat? We’d love to hear from you! Get in touch with our Customer Success Team to inquire about speaking events, advertising rates, or just say hello."
           btnText="Copy Email"
           icon={<CiMail />}
+          
           image={contactImg}
           imgDevClasses="hidden md:block relative -bottom-10 !w-[600px] h-[380px]"
         />

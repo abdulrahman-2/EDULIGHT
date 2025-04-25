@@ -13,8 +13,10 @@ import verizon from "@/assets/home-images/verizon.png";
 import lexmark from "@/assets/home-images/lexmark.png";
 import microsoft from "@/assets/home-images/microsoft.png";
 
+
 import {
   PiChartBarHorizontalDuotone,
+  PiCheckSquareOffsetDuotone,
   PiClockDuotone,
   PiCreditCardBold,
   PiCrownSimpleDuotone,
@@ -46,6 +48,7 @@ import {
   HomeNavItems,
   Links,
   SocialLinks,
+  StudentCard,
   TableData,
   TechAndEarn,
 } from "@/types";
@@ -794,7 +797,7 @@ export const instructorPageInfo: DashInfo[] = [
     value:
       "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.",
     color: "#564FFD",
-    bgColor:"#564FFD1A",
+    bgColor: "#564FFD1A",
     icon: <PiNewspaperClippingDuotone />,
   },
   {
@@ -803,7 +806,7 @@ export const instructorPageInfo: DashInfo[] = [
     value:
       "Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.",
     color: "#E34444",
-    bgColor:"#FFF0F0",
+    bgColor: "#FFF0F0",
     icon: <PiIdentificationCardDuotone />,
   },
   {
@@ -812,7 +815,7 @@ export const instructorPageInfo: DashInfo[] = [
     value:
       "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque. ",
     color: "#293897",
-    bgColor:"#EAEBF5",
+    bgColor: "#EAEBF5",
     icon: <PiPlayCircleDuotone />,
   },
   {
@@ -825,3 +828,79 @@ export const instructorPageInfo: DashInfo[] = [
     icon: <PiHandshakeDuotone />,
   },
 ];
+
+export const studentDash: DashInfo[] = [
+  {
+    id: 1,
+    icon: <PiPlayCircleDuotone />,
+    color: "#293897",
+    bgColor: "#EAEBF5",
+    title: "Enrolled Courses",
+    value: "957",
+  },
+  {
+    id: 2,
+    icon: <PiCheckSquareOffsetDuotone />,
+    color: "#FF6636",
+    bgColor: "#FFDDD1",
+    title: "Active Courses",
+    value: "6",
+  },
+  {
+    id: 3,
+    icon: <PiTrophyDuotone />,
+    color: "#23BD33",
+    bgColor: "#E1F7E3",
+    title: "Completed Courses",
+    value: "901",
+  },
+];
+
+export const studentCard: StudentCard[] = [
+  {
+      id:1,
+      title:"1. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" ,
+      image: courseImage,
+      btnText:"Watch Lecture"
+      
+  },
+  {
+      id:2,
+      title:"2. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" ,
+      image: courseImage,
+      btnText:"Watch Lecture"
+  },
+  {
+      id:3,
+      title:"3. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" , 
+      image: courseImage,                     
+      btnText:"Watch Lecture"
+  } ,
+  {
+      id:4,
+      title:"1. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" ,
+      image: courseImage,
+      btnText:"Watch Lecture",
+      status:"12% Finish"
+      
+  },
+  {
+      id:5,
+      title:"2. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" ,
+      image: courseImage,
+      btnText:"Watch Lecture",
+      status:"61% Completed"
+  },
+  {
+      id:6,
+      title:"3. Intorductions",
+      courseName:"Reiki Level I, II and Master/Teacher Program" , 
+      image: courseImage,                     
+      btnText:"Watch Lecture"
+  } 
+]

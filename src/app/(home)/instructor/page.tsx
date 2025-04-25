@@ -98,6 +98,8 @@ const page = () => {
               src={sectionImage1}
               alt="instructor image"
               fill
+              loading="lazy"
+
               className="object-contain"
             />
           </div>
@@ -171,6 +173,7 @@ const page = () => {
             <Image
               src={sectionImage2}
               alt="instructor image"
+              loading="lazy"
               fill
               className="object-contain"
             />
@@ -183,6 +186,7 @@ const page = () => {
             <Image
               src={sectionImage3}
               alt="instructor image"
+              loading="lazy"
               fill
               className="object-contain"
             />
@@ -240,6 +244,7 @@ const page = () => {
             <Image
               src={instructors}
               alt="instructors image"
+              loading="lazy"
               fill
               className="bject-contain"
             />
