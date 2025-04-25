@@ -135,5 +135,69 @@ const loginInputs = [
     className: "col-span-2",
   },
 ];
+const contactInputs = [
+{fields :[
+  {
+    name: "firstName",
+    label: "First Name",
+    type: "text",
+    placeholder: "First Name",
+    className: "col-span-1",
+  },
+  {
+    name: "lastName",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Last Name",
+    className: "col-span-1",
+  },
+]},
+  {
+    name: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Email",
+    className: "col-span-2",
+  },
+  {
+    name: "subject",
+    label: "Subject",
+    type: "text",
+    placeholder: "Subject",
+    className: "col-span-2",
+  },
+  {
+    name: "message",
+    label: "Message",
+    type: "textarea",
+    placeholder: "Send us a message",
+    className: "col-span-2 ",
+  },
+];
+const faqsInputs = [
+  {
+    name: "subject",
+    label: "Subject",
+    type: "text",
+    placeholder: "Subject",
+    className: "col-span-2",
+  },
+  {
+    name: "message",
+    label: "Message",
+    type: "textarea",
+    placeholder: "Message",
+    className: "col-span-2",
+  },
+];
+const emailInputs = [
+  {
+    name: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Email",
+    className: "col-span-2",
+  },
+];
 
-export { settingInputs, CreateCourseInputs, signUpInputs, loginInputs };
+export { settingInputs, CreateCourseInputs, signUpInputs, loginInputs,contactInputs,faqsInputs,emailInputs };

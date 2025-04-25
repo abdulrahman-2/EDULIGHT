@@ -37,5 +37,19 @@ const loginSchema = z.object({
   email: z.string().email("Invalid email address"),
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
+const contactSchema = z.object({
+  fName: z.string().min(4, "Name must be at least 4 characters"),
+  lName: z.string().min(4, "Name must be at least 4 characters"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(4, "Subject must be at least 4 characters"),
+  message: z.string().min(4, "Message must be at least 4 characters"),
 
-export { CreateSchema, settingSchema, createAccountSchema, loginSchema };
+});
+const faqsSchema = z.object({
+  subject: z.string().min(4, "Subject must be at least 4 characters"),
+  message: z.string().min(4, "Message must be at least 4 characters"),
+})
+const emailSchema = z.object({
+  email: z.string().email("Invalid email address"),
+})
+export { CreateSchema, settingSchema, createAccountSchema, loginSchema, contactSchema,faqsSchema,emailSchema };

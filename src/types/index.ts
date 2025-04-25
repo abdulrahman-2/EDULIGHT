@@ -86,3 +86,20 @@ export type FooterLinks = {
   groupTitle: string;
   links: { id: number; title: string; link: string }[];
 };
+
+export type AboutWords = {
+  id: number;
+  job:string;
+  company:string;
+  name: string;
+  desc: string;
+
+}
+export type Faqs = {
+  id:number,
+  question:string,
+  answer:string,
+  category:string
+
+}
+
