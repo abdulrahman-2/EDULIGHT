@@ -14,7 +14,7 @@ const CustomSection = ({image,btnText,headingText,paragraph,aboutOnly, icon,imgD
         {linkText? (<div className='mt-6'><CustomLink link='/' title={linkText} /></div>):(<></>)}
     </div>
     <div className={`relative  ${imgDevClasses}`}>
-        <Image src={image} alt="about" fill className="bject-contain" />
+        <Image src={image} alt="about" loading='lazy' fill className="bject-contain" />
     </div>
   </div>
   )

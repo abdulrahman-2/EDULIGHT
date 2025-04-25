@@ -1,7 +1,9 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import logo from "@/assets/das-images/light-logo.png";
 import { CustomSelect } from "@/components/common/CustomSelect";
+import student from "@/assets/home-images/Avatar.png"
 import Search from "@/components/common/Search";
 import {
   IoCartOutline,
@@ -11,8 +13,20 @@ import {
 import CustomLink from "../CustomLink";
 import ToggleLayout from "../../ToggleLayout";
 import { homeNavItems } from "@/constants";
+import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
+import { setActiveTab } from "@/features/profile/profileSlice";
 
 const BottomNav = () => {
+  const router = useRouter()
+  const session = true
+  const dispatch = useDispatch()
+  const redirectToWishlist = () => {
+    router.push("/profile")
+    dispatch(setActiveTab("Wishlist"))
+    
+  }
   return (
     <nav className=" flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8  ">
       <div className="flex items-center gap-8 ">
@@ -34,16 +48,23 @@ const BottomNav = () => {
       <div className="flex items-center gap-3 ">
         <div className="flex items-center gap-3 ">
           <IoNotificationsOutline className="text-xl hover:text-primary duration-200 cursor-pointer" />
-          <IoHeartOutline className="text-xl hover:text-primary duration-200 cursor-pointer" />
-          <IoCartOutline className="text-xl hover:text-primary duration-200 cursor-pointer" />
-        </div>
+<IoHeartOutline onClick={redirectToWishlist} className="text-xl hover:text-primary duration-200 cursor-pointer" />    
+<Link href="/cart"><IoCartOutline className="text-xl hover:text-primary duration-200 cursor-pointer" /></Link>        </div>
         <div className=" items-center gap-2 hidden lg:flex">
-          <CustomLink
-            link="/signup"
-            title="Create Account"
-            className="bg-primary/10 !text-primary hover:!bg-primary/20"
-          />
-          <CustomLink link="/login" title="Sign In" />{" "}
+          {session ? (
+            <Link href="/profile"><Image alt="user" src={student} width={40} height={40} className="rounded-full" /></Link>
+          ) : (
+            <>
+
+              <CustomLink
+              link="/signup"
+              title="Create Account"
+              className="bg-primary/10 !text-primary hover:!bg-primary/20"
+            />
+            <CustomLink link="/login" title="Sign In" />
+            </>
+          )}
+          
         </div>
       </div>
     </nav>

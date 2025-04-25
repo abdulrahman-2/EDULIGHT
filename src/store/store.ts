@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import sidebarReducer from "@/features/sidebar/sidebarSlice";
-
+import profileReducer from "@/features/profile/profileSlice";
 export const store = configureStore({
   reducer: {
     sidebar: sidebarReducer,
+    profile: profileReducer,
   },
 });
 

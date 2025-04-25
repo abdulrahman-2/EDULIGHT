@@ -103,3 +103,11 @@ export type Faqs = {
 
 }
 
+export type StudentCard = {
+  id: number;
+  image: string | any;
+  courseName: string;
+  title: string;
+ btnText:"Watch Lecture",
+ status?:string
+}
