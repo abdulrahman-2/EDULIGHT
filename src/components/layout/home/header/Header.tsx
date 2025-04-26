@@ -1,17 +1,13 @@
-import Search from "@/components/common/Search";
 import BottomNav from "./BottomNav";
 import TopNav from "./TopNav";
 
 const Header = () => {
-  return( 
-    <header  >
+  return (
+    <header>
       <TopNav />
-      <BottomNav  />
-
-
+      <BottomNav />
     </header>
-
-  )
+  );
 };
 
 export default Header;

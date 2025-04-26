@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import logo from "@/assets/das-images/light-logo.png";
 import { CustomSelect } from "@/components/common/CustomSelect";
-import student from "@/assets/home-images/Avatar.png"
+import student from "@/assets/home-images/Avatar.png";
 import Search from "@/components/common/Search";
 import {
   IoCartOutline,
@@ -19,20 +19,22 @@ import { useRouter } from "next/navigation";
 import { setActiveTab } from "@/features/profile/profileSlice";
 
 const BottomNav = () => {
-  const router = useRouter()
-  const session = true
-  const dispatch = useDispatch()
+  const router = useRouter();
+  const session = true;
+  const dispatch = useDispatch();
   const redirectToWishlist = () => {
-    router.push("/profile")
-    dispatch(setActiveTab("Wishlist"))
-    
-  }
+    router.push("/profile");
+    dispatch(setActiveTab("Wishlist"));
+  };
   return (
-    <nav className=" flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8  ">
+    <nav className="flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 shadow-md shadow-gray-300">
       <div className="flex items-center gap-8 ">
         <div className="flex items-center gap-1">
-          <ToggleLayout className="hover:text-primary block md:hidden" menus={homeNavItems} />
-        <Image src={logo} width={150} height={40} alt="logo" />
+          <ToggleLayout
+            className="hover:text-primary block lg:hidden"
+            menus={homeNavItems}
+          />
+          <Image src={logo} width={150} height={40} alt="logo" />
         </div>
         <div className="flex items-center gap-2">
           <CustomSelect
@@ -48,23 +50,35 @@ const BottomNav = () => {
       <div className="flex items-center gap-3 ">
         <div className="flex items-center gap-3 ">
           <IoNotificationsOutline className="text-xl hover:text-primary duration-200 cursor-pointer" />
-<IoHeartOutline onClick={redirectToWishlist} className="text-xl hover:text-primary duration-200 cursor-pointer" />    
-<Link href="/cart"><IoCartOutline className="text-xl hover:text-primary duration-200 cursor-pointer" /></Link>        </div>
+          <IoHeartOutline
+            onClick={redirectToWishlist}
+            className="text-xl hover:text-primary duration-200 cursor-pointer"
+          />
+          <Link href="/cart">
+            <IoCartOutline className="text-xl hover:text-primary duration-200 cursor-pointer" />
+          </Link>{" "}
+        </div>
         <div className=" items-center gap-2 hidden lg:flex">
           {session ? (
-            <Link href="/profile"><Image alt="user" src={student} width={40} height={40} className="rounded-full" /></Link>
+            <Link href="/profile">
+              <Image
+                alt="user"
+                src={student}
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            </Link>
           ) : (
             <>
-
               <CustomLink
-              link="/signup"
-              title="Create Account"
-              className="bg-primary/10 !text-primary hover:!bg-primary/20"
-            />
-            <CustomLink link="/login" title="Sign In" />
+                link="/signup"
+                title="Create Account"
+                className="bg-primary/10 !text-primary hover:!bg-primary/20"
+              />
+              <CustomLink link="/login" title="Sign In" />
             </>
           )}
-          
         </div>
       </div>
     </nav>

@@ -3,7 +3,6 @@ import courseImage from "@/assets/home-images/cardImage.png";
 import { featuredCourses } from "@/constants";
 import { FaStar } from "react-icons/fa6";
 import { LuChartNoAxesColumnIncreasing, LuClock3, LuUserRound } from "react-icons/lu";
-import { CiClock2 } from "react-icons/ci";
 const FeatCourseCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">

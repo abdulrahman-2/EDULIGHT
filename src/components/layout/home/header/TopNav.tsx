@@ -8,7 +8,6 @@ import {
 import { homeNavItems } from "@/constants";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { usePathname } from "next/navigation";
-import ToggleLayout from "../../ToggleLayout";
 
 const TopNav = () => {
   const pathname = usePathname();
@@ -22,12 +21,12 @@ const TopNav = () => {
             const isActive = pathname === item.link;
             return (
               <li
-                key={item.id}
+                key={item.name}
                 className={`py-4 inline-block  hover:text-white duration-200 ${
                   isActive ? "text-white  border-t" : ""
                 } `}
               >
-                <a href={item.link}>{item.title}</a>
+                <a href={item.link}>{item.name}</a>
               </li>
             );
           })}

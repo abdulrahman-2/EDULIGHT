@@ -12,7 +12,7 @@ import CustomLink from "@/components/layout/home/CustomLink";
 const Home = () => {
   return (
     <div className="relative">
-      <main className="relative w-full h-screen ">
+      <main className="relative w-full h-screen">
         <Image
           src={hero}
           alt="Hero"

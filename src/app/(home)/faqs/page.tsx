@@ -20,9 +20,10 @@ const categories = [
   "Ut sed orci",
 ];
 
-const page = () => {
+const Faqs = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  console.log(activeIndex);
 
   const filteredFaqs =
     selectedCategory === "All"
@@ -88,13 +89,12 @@ const page = () => {
 
               <aside className="md:col-span-3  shadow rounded p-4 space-y-4 h-fit sticky top-20 ">
                 <h3 className="font-semibold text-lg">
-                  Don't find your answer?
+                  Don&apos;t find your answer?
                 </h3>
                 <p className="text-sm text-gray-600">
                   Write your question here and our support team will help you.
                 </p>
                 <FormGenerator
-
                   inputs={faqsInputs}
                   onSubmit={handleFormSubmit}
                   schema={faqsSchema}
@@ -109,4 +109,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Faqs;

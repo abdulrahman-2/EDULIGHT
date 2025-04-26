@@ -1,6 +1,5 @@
 "use client";
 
-import CoursesSidebar from "@/components/layout/home/CoursesSidebar";
 import filterIcon from "@/assets/home-images/filter-icon.svg";
 import Image from "next/image";
 import Search from "@/components/common/Search";
@@ -9,31 +8,18 @@ import { courseContent } from "@/constants";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import HCourseCard from "@/components/layout/home/HCourseCard";
-import { CustomPagination } from "@/components/common/CustomPagination";
+import ExamCard from "@/components/layout/home/ExamCard";
+import ExamSidebar from "@/components/layout/home/ExamSidebar";
 
-const HomeCourses = () => {
+const Exams = () => {
   const [open, setOpen] = useState(false);
   const mobileView = useMediaQuery("(max-width: 1024px)");
-  const [startPage, setStartPage] = useState(0);
-  const [endPage, setEndPage] = useState(1);
 
   useEffect(() => {
     if (mobileView) {
       setOpen(false);
     }
   }, [mobileView]);
-
-  const pageCount = Math.ceil(courseContent.length / 8);
-
-  const setNextPage = () => {
-    setStartPage((prev) => prev + 1);
-    setEndPage((prev) => prev + 1);
-  };
-  const setPrevPage = () => {
-    setStartPage((prev) => prev - 1);
-    setEndPage((prev) => prev - 1);
-  };
   return (
     <div className="container my-10">
       <div className="mb-5 flex flex-col lg:flex-row items-center justify-between gap-5">
@@ -81,8 +67,8 @@ const HomeCourses = () => {
           results find for “ui/ux design”
         </div>
       </div>
-      <div className="flex mb-10">
-        <CoursesSidebar open={open} />
+      <div className="flex">
+        <ExamSidebar open={open} />
         <div className="flex-1">
           <div
             className={cn(
@@ -90,20 +76,14 @@ const HomeCourses = () => {
               !open && "xl:grid-cols-4 ml-0"
             )}
           >
-            {courseContent.slice(startPage, endPage).map((course) => (
-              <HCourseCard key={course.id} {...course} />
+            {courseContent.slice(0, 2).map((course) => (
+              <ExamCard key={course.id} {...course} />
             ))}
           </div>
         </div>
       </div>
-
-      <CustomPagination
-        pageCount={pageCount}
-        setNextPage={setNextPage}
-        setPrevPage={setPrevPage}
-      />
     </div>
   );
 };
 
-export default HomeCourses;
+export default Exams;

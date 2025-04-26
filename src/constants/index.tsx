@@ -12,7 +12,9 @@ import slack from "@/assets/home-images/slack.png";
 import verizon from "@/assets/home-images/verizon.png";
 import lexmark from "@/assets/home-images/lexmark.png";
 import microsoft from "@/assets/home-images/microsoft.png";
-
+import examImg_1 from "@/assets/home-images/exam-1.png";
+import examImg_2 from "@/assets/home-images/exam-2.png";
+import examImg_3 from "@/assets/home-images/exam-3.png";
 
 import {
   PiChartBarHorizontalDuotone,
@@ -45,14 +47,13 @@ import {
   FeaturedCourses,
   FooterLinks,
   HomeCategories,
-  HomeNavItems,
   Links,
   SocialLinks,
   StudentCard,
   TableData,
   TechAndEarn,
 } from "@/types";
-import { LogOutIcon, PlayCircle } from "lucide-react";
+import { LogOutIcon } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
@@ -216,6 +217,61 @@ export const courseContent: CourseCardContent[] = [
     students: "1,674,767",
     price: "$19.99",
   },
+  {
+    id: 11,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 12,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 13,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 14,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
+  {
+    id: 15,
+    image: courseImage,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    rating: "4.5",
+    students: "1,674,767",
+    price: "$19.99",
+  },
 ];
 
 export const courseDetailsCard: DashInfo[] = [
@@ -365,47 +421,15 @@ export const tableData: TableData[] = [
 ];
 
 // website fake data -----------------
-export const homeNavItems: HomeNavItems[] = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "Courses",
-    link: "/home-courses",
-  },
-  {
-    id: 3,
-    title: "Roadmaps",
-    link: "/roadmaps",
-  },
-  {
-    id: 4,
-    title: "Exams",
-    link: "/exams",
-  },
-  {
-    id: 5,
-    title: "About",
-    link: "/about",
-  },
-  {
-    id: 6,
-    title: "Contact",
-    link: "/contact",
-  },
-  {
-    id: 7,
-    title: "Become an Instructor",
-    link: "/instructor",
-  },
-  {
-    id: 8,
-    title: "Become a Company",
-    link: "/company",
-  },
+export const homeNavItems: Links[] = [
+  { name: "Home", link: "/", icon: undefined },
+  { name: "Courses", link: "/home-courses", icon: undefined },
+  { name: "Roadmaps", link: "/roadmaps", icon: undefined },
+  { name: "Exams", link: "/exams", icon: undefined },
+  { name: "About", link: "/about", icon: undefined },
+  { name: "Contact", link: "/contact", icon: undefined },
+  { name: "Become an Instructor", link: "/instructor", icon: undefined },
+  { name: "Become a Company", link: "/company", icon: undefined },
 ];
 
 export const homeCategories: HomeCategories[] = [
@@ -858,49 +882,200 @@ export const studentDash: DashInfo[] = [
 
 export const studentCard: StudentCard[] = [
   {
-      id:1,
-      title:"1. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" ,
-      image: courseImage,
-      btnText:"Watch Lecture"
-      
+    id: 1,
+    title: "1. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
   },
   {
-      id:2,
-      title:"2. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" ,
-      image: courseImage,
-      btnText:"Watch Lecture"
+    id: 2,
+    title: "2. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
   },
   {
-      id:3,
-      title:"3. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" , 
-      image: courseImage,                     
-      btnText:"Watch Lecture"
-  } ,
-  {
-      id:4,
-      title:"1. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" ,
-      image: courseImage,
-      btnText:"Watch Lecture",
-      status:"12% Finish"
-      
+    id: 3,
+    title: "3. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
   },
   {
-      id:5,
-      title:"2. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" ,
-      image: courseImage,
-      btnText:"Watch Lecture",
-      status:"61% Completed"
+    id: 4,
+    title: "1. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
+    status: "12% Finish",
   },
   {
-      id:6,
-      title:"3. Intorductions",
-      courseName:"Reiki Level I, II and Master/Teacher Program" , 
-      image: courseImage,                     
-      btnText:"Watch Lecture"
-  } 
-]
+    id: 5,
+    title: "2. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
+    status: "61% Completed",
+  },
+  {
+    id: 6,
+    title: "3. Intorductions",
+    courseName: "Reiki Level I, II and Master/Teacher Program",
+    image: courseImage,
+    btnText: "Watch Lecture",
+  },
+];
+
+export const examasData: CourseCardContent[] = [
+  {
+    id: 1,
+    image: examImg_3,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 2,
+    image: examImg_1,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 3,
+    image: examImg_2,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 4,
+    image: examImg_3,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 5,
+    image: examImg_1,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 6,
+    image: examImg_2,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 7,
+    image: examImg_3,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 8,
+    image: examImg_1,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 9,
+    image: examImg_2,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 10,
+    image: examImg_3,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 11,
+    image: examImg_1,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 12,
+    image: examImg_2,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 13,
+    image: examImg_3,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 14,
+    image: examImg_1,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+  {
+    id: 15,
+    image: examImg_2,
+    category: "Web Development",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+    desc: "description of the course",
+    students: "1,674,767",
+    duration: "30m",
+  },
+];

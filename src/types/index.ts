@@ -1,7 +1,7 @@
 export type Links = {
   name: string;
   link: string;
-  icon: React.ReactElement;
+  icon: React.ReactElement | undefined;
 };
 
 export type DashInfo = {
@@ -20,9 +20,10 @@ export type CourseCardContent = {
   category: string;
   title: string;
   desc?: string;
-  rating: string;
+  rating?: string;
   students: string;
   price?: string;
+  duration?: string;
 };
 
 export type TableData = {
@@ -33,12 +34,7 @@ export type TableData = {
   date: string;
 };
 
-// website types -----------
-export type HomeNavItems = {
-  id: number;
-  title: string;
-  link: string;
-};
+// website types ----------
 export type HomeCategories = {
   id: number;
   coursesCount: string;

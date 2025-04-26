@@ -44,7 +44,7 @@ const ToggleLayout =({ menus, className }: { menus: any; className?: string })=>
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed inset-y-0 left-0 w-72 bg-background px-4 min-h-screen transition-all duration-300 
+        className={`fixed z-50 inset-y-0 left-0 w-72 bg-background px-4 min-h-screen transition-all duration-300 
           ${
             isOpen
               ? "translate-x-0 opacity-100 visible"
