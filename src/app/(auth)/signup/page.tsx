@@ -8,18 +8,48 @@ import FormGenerator from "@/components/forms/useFormGenerator";
 import { createAccountSchema } from "@/schema";
 import { signUpInputs } from "@/constants/formInputs";
 import Link from "next/link";
+import { redirect, useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { signup } from "@/features/auth/authSlice";
+import { getToken } from "@/lib/utils";
+import { useEffect } from "react";
+import { AppDispatch } from "@/store/store";
 
 const SignUp = () => {
-  const handleFormSubmit = (data: {
+  const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
+
+  const token = getToken();
+
+  useEffect(() => {
+    if (token) {
+      redirect("/login");
+    }
+  }, [token]);
+
+  const handleFormSubmit = async (data: {
     fullName: string;
     email: string;
     password: string;
     confirmPassword: string;
-    image: any;
   }) => {
-    console.log("Form Data:", data);
-  };
+    try {
+      const apiData = {
+        fullName: data.fullName,
+        email: data.email,
+        password: data.password,
+      };
 
+      const res = await dispatch(signup(apiData)).unwrap();
+      router.push("/login");
+      console.log("Success:", res);
+    } catch (error: any) {
+      console.error(
+        "Registration failed:",
+        error.response?.data || error.message
+      );
+    }
+  };
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-between">
       <div className="md:h-screen">

@@ -111,12 +111,6 @@ const signUpInputs = [
       },
     ],
   },
-  {
-    name: "image",
-    label: "Profile Picture",
-    type: "file",
-    className: "col-span-2",
-  },
 ];
 
 const loginInputs = [

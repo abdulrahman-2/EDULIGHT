@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/components/layout/StoreProvider";
+import Notifications from "@/components/layout/Notifications";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.className} antialiased`}>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>{children}
+          <Notifications/>
+        </StoreProvider>
       </body>
     </html>
   );

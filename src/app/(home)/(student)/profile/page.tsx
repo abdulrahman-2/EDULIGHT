@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import student from "@/assets/home-images/Avatar.png"
 import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { setActiveTab } from "@/features/profile/profileSlice";
 import StudentSettings from "@/components/layout/home/student/StudentSettings";
+import { redirect } from "next/navigation";
 
 const menu = [
   { id: 1, title: "Dashboard" },
@@ -22,6 +23,15 @@ const menu = [
 const Page = () => {
   const dispatch = useDispatch();
   const {activeTab} = useSelector((state:RootState) => state.profile);
+  const {token} = useSelector((state:RootState) => state.auth);
+  
+
+  useEffect(() => {
+    if (!token) {
+      redirect("/login");
+    }
+  }, [token]);
+
 
   return (
     <main>

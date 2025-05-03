@@ -1079,3 +1079,128 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
   },
 ];
+
+export const curriculum = [
+  {
+    id: 1,
+    title: "Week 1",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Secret of Good Design",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Practice Design Like an Artist",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Web Development (webflow)",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Secrets of Making Money Freelancing",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+];

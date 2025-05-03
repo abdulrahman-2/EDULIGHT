@@ -14,17 +14,26 @@ import CustomLink from "../CustomLink";
 import ToggleLayout from "../../ToggleLayout";
 import { homeNavItems } from "@/constants";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setActiveTab } from "@/features/profile/profileSlice";
+import { RootState } from "@/store/store";
+import { Avatar } from "@/components/common/Avatar";
+import { logout } from "@/features/auth/authSlice";
+import toast from "react-hot-toast";
 
 const BottomNav = () => {
   const router = useRouter();
-  const session = true;
+  const { token, user } = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch();
   const redirectToWishlist = () => {
     router.push("/profile");
     dispatch(setActiveTab("Wishlist"));
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    toast.success("Logged out successfully");
   };
   return (
     <nav className="flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 shadow-md shadow-gray-300">
@@ -59,16 +68,12 @@ const BottomNav = () => {
           </Link>{" "}
         </div>
         <div className=" items-center gap-2 hidden lg:flex">
-          {session ? (
-            <Link href="/profile">
-              <Image
-                alt="user"
-                src={student}
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-            </Link>
+          {token ? (
+            <Avatar
+              profile={user.profile || student}
+              email={user.email}
+              logout={handleLogout}
+            />
           ) : (
             <>
               <CustomLink

@@ -71,7 +71,7 @@ const Home = () => {
           <h1 className="text-3xl font-semibold lg:text-4xl text-center">
             Best selling courses
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-8">
             <HCourseCard />
           </div>
         </div>
