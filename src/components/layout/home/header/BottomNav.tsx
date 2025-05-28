@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/das-images/light-logo.png";
 import { CustomSelect } from "@/components/common/CustomSelect";
 import student from "@/assets/home-images/Avatar.png";
@@ -17,17 +17,29 @@ import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setActiveTab } from "@/features/profile/profileSlice";
+import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
   const router = useRouter();
   const session = true;
   const dispatch = useDispatch();
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const redirectToWishlist = () => {
     router.push("/profile");
     dispatch(setActiveTab("Wishlist"));
   };
   return (
-    <nav className="flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 shadow-md shadow-gray-300">
+    <nav className={`flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 bg-white z-50 transition-all duration-300 ease-in-out
+      ${isSticky ? 'fixed top-0 left-0 right-0 shadow-md' : 'relative shadow-sm'}`}>
       <div className="flex items-center gap-8 ">
         <div className="flex items-center gap-1">
           <ToggleLayout

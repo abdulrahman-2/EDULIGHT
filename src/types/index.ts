@@ -24,6 +24,9 @@ export type CourseCardContent = {
   students: string;
   price?: string;
   duration?: string;
+  question?:string;
+  correctAnswer?:string;
+  incorrectAnswers?:string[];
 };
 
 export type TableData = {

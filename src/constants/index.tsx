@@ -937,6 +937,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 2,
@@ -947,6 +954,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "are you a web developer?",
+    correctAnswer: "yes",
+    incorrectAnswers: [
+      "no",
+      "maybe",
+      "a7a"
+    ]
   },
   {
     id: 3,
@@ -957,6 +971,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "html is a markup language",
+    correctAnswer: "yes",
+    incorrectAnswers: [
+      "no",
+      "noo",
+      "no"
+    ]
   },
   {
     id: 4,
@@ -967,6 +988,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "js is a markup language",
+    correctAnswer: "no",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 5,
@@ -977,6 +1005,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 6,
@@ -987,6 +1022,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 7,
@@ -997,6 +1039,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 8,
@@ -1007,6 +1056,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 9,
@@ -1017,6 +1073,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 10,
@@ -1027,6 +1090,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 11,
@@ -1037,6 +1107,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 12,
@@ -1047,6 +1124,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 13,
@@ -1057,6 +1141,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 14,
@@ -1067,6 +1158,13 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
   {
     id: 15,
@@ -1077,5 +1175,12 @@ export const examasData: CourseCardContent[] = [
     desc: "description of the course",
     students: "1,674,767",
     duration: "30m",
+    question: "When did the Byzantine Empire collapse?",
+    correctAnswer: "1453",
+    incorrectAnswers: [
+      "1299",
+      "1353",
+      "1498"
+    ]
   },
 ];
