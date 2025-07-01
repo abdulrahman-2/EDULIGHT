@@ -1,59 +1,43 @@
 "use client";
 
 import * as React from "react";
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
-import logo from "@/assets/das-images/logo.png";
+import Link from "next/link";
 
-type Checked = DropdownMenuCheckboxItemProps["checked"];
-
-export function Avatar() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
-
+export function Avatar({ name, email, logout }: any) {
+  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="relative size-10 rounded-full p-2 border dark:border-gray-600">
-          <Image
-            src={logo}
+        <div className="">
+          {/* <Image
+            src={profile}
             alt="avatar"
             fill
             className="cursor-pointer object-contain"
-          />
+          /> */}
+          <p className="cursor-pointer">Hi {name}</p>
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+        <DropdownMenuCheckboxItem>{email}</DropdownMenuCheckboxItem>
         <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={showStatusBar}
-          onCheckedChange={setShowStatusBar}
-        >
-          Status Bar
+        <DropdownMenuCheckboxItem>
+          <Link href="/profile" className="w-full">
+            Profile
+          </Link>
         </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showActivityBar}
-          onCheckedChange={setShowActivityBar}
-          disabled
-        >
-          Activity Bar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showPanel}
-          onCheckedChange={setShowPanel}
-        >
-          Panel
+        <DropdownMenuCheckboxItem>
+          <span className="w-full cursor-pointer text-red-600" onClick={logout}>
+            Logout
+          </span>
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

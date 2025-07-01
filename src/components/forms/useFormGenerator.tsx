@@ -77,7 +77,11 @@ const FormGenerator = ({
                     ) : input.type === "textarea" ? (
                       <textarea
                         {...field}
-                        rows={input.rows || 4}
+                        rows={input.rows || 4}/>
+                    ) : input.type === "textarea" ? ( // ✅ إضافة حالة textarea
+                      <textarea
+                        {...field}
+                        rows={input.rows || 4} // عدد الأسطر الافتراضي 4 ويمكن تعديله
                         placeholder={input.placeholder || ""}
                         className={cn(
                           "border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none",

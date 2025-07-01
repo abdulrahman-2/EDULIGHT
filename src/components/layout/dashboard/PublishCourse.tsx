@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import { z } from "zod";
 import instructorImage from "@/assets/das-images/person.png";
-import { Close } from "@radix-ui/react-dialog";
 import { IoClose } from "react-icons/io5";
 
 const PublishCourse = () => {

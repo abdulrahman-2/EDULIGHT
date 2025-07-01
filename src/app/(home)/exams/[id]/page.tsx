@@ -12,7 +12,7 @@ const page = ({ params }: { params: { id: string } }) => {
     return <div>exam not found</div>;
   }
 
-  const { correctAnswer, incorrectAnswers, question, title } = examFiltered;
+  const { duration, title } = examFiltered;
   return (
     <div className="container md:max-w-7xl mx-auto bg-white shadow-md rounded-lg px-12 py-8 my-10">
       <div className="flex items-center justify-between mb-6">
@@ -27,7 +27,7 @@ const page = ({ params }: { params: { id: string } }) => {
       <div className="flex items-center gap-4 border-y py-6">
         <TbClockHour3Filled className="text-2xl" />
         <div className="flex  flex-col gap-2">
-          <h4 className="text-[16px] font-semibold">This Exam is 45 minutes</h4>
+          <h4 className="text-[16px] font-semibold">This Exam is {duration} minutes</h4>
           <p className="text-gray-400">
             There are time limits on this exam , take the time you need to
             finish the exam select “ submit Answers’ after the last Question.

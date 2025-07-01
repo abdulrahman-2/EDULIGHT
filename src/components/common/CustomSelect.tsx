@@ -15,7 +15,7 @@ interface SelectProps {
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
-  className?: string; 
+  className?: string;
 }
 
 export function CustomSelect({
@@ -23,12 +23,14 @@ export function CustomSelect({
   value,
   onChange,
   className,
-  placeholder
+  placeholder,
 }: SelectProps) {
   return (
     <Select onValueChange={onChange} value={value}>
       <SelectTrigger className={cn("w-full", className)}>
-      <SelectValue placeholder={placeholder ? placeholder : "Select an option"} />
+        <SelectValue
+          placeholder={placeholder ? placeholder : "Select an option"}
+        />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

@@ -936,14 +936,10 @@ export const examasData: CourseCardContent[] = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
     desc: "description of the course",
     students: "1,674,767",
-    duration: "30m",
+    duration: "30 minutes",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 2,
@@ -953,14 +949,10 @@ export const examasData: CourseCardContent[] = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
     desc: "description of the course",
     students: "1,674,767",
-    duration: "30m",
+    duration: "30 minutes",
     question: "are you a web developer?",
     correctAnswer: "yes",
-    incorrectAnswers: [
-      "no",
-      "maybe",
-      "a7a"
-    ]
+    incorrectAnswers: ["no", "maybe", "a7a"],
   },
   {
     id: 3,
@@ -970,14 +962,10 @@ export const examasData: CourseCardContent[] = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
     desc: "description of the course",
     students: "1,674,767",
-    duration: "30m",
+    duration: "30 minutes",
     question: "html is a markup language",
     correctAnswer: "yes",
-    incorrectAnswers: [
-      "no",
-      "noo",
-      "no"
-    ]
+    incorrectAnswers: ["no", "noo", "no"],
   },
   {
     id: 4,
@@ -990,11 +978,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "js is a markup language",
     correctAnswer: "no",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 5,
@@ -1007,11 +991,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 6,
@@ -1024,11 +1004,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 7,
@@ -1041,11 +1017,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 8,
@@ -1058,11 +1030,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 9,
@@ -1075,11 +1043,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 10,
@@ -1092,11 +1056,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 11,
@@ -1109,11 +1069,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 12,
@@ -1126,11 +1082,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 13,
@@ -1143,11 +1095,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 14,
@@ -1160,11 +1108,7 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
   },
   {
     id: 15,
@@ -1177,10 +1121,131 @@ export const examasData: CourseCardContent[] = [
     duration: "30m",
     question: "When did the Byzantine Empire collapse?",
     correctAnswer: "1453",
-    incorrectAnswers: [
-      "1299",
-      "1353",
-      "1498"
-    ]
+    incorrectAnswers: ["1299", "1353", "1498"],
+  },
+];
+
+export const curriculum = [
+  {
+    id: 1,
+    title: "Week 1",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Secret of Good Design",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Practice Design Like an Artist",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Web Development (webflow)",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Secrets of Making Money Freelancing",
+    lessons: [
+      {
+        id: 1,
+        title: "What’s is Webflow?",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 2,
+        title: "Sign up in Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+      {
+        id: 3,
+        title: "Teaser of Webflow",
+        video: "/watch",
+        time: "10m",
+      },
+    ],
   },
 ];

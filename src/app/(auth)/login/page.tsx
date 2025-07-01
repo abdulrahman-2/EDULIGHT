@@ -8,10 +8,36 @@ import FormGenerator from "@/components/forms/useFormGenerator";
 import { loginSchema } from "@/schema";
 import { loginInputs } from "@/constants/formInputs";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { redirect, useRouter } from "next/navigation";
+import { signin } from "@/features/auth/authSlice";
+import { getToken } from "@/lib/utils";
+import { useEffect } from "react";
+import { AppDispatch } from "@/store/store";
 
 const Login = () => {
-  const handleFormSubmit = (data: { email: string; password: string }) => {
-    console.log("Form Data:", data);
+  const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
+
+  const token = getToken();
+
+  useEffect(() => {
+    if (token) {
+      redirect("/login");
+    }
+  }, [token]);
+
+  const handleFormSubmit = async (data: {
+    email: string;
+    password: string;
+  }) => {
+    console.log(data);
+    try {
+      await dispatch(signin(data)).unwrap();
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

@@ -8,8 +8,6 @@ import { CustomSelect } from "@/components/common/CustomSelect";
 import { Progress } from "@/components/ui/progress";
 
 
-
-
 const Page = ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
@@ -21,11 +19,10 @@ const Page = ({ params }: { params: { id: string } }) => {
     return <div>Course not found</div>;
   }
 
-  const { image, title, desc, price, category, rating, students } =
-    filteredCourse;
+  const { image, title, desc, price, category, rating } = filteredCourse;
 
   return (
-    <div className=' flex-1 flex flex-col'>
+    <div className=" flex-1 flex flex-col">
       <p className="py-3 text-[12px] md:text-sm text-gray-400">
         Course / My Courses / {category} /{" "}
         <span className="text-gray-700">{title}</span>
@@ -79,8 +76,10 @@ const Page = ({ params }: { params: { id: string } }) => {
             </div>
           </div>
           <hr className="py-2" />
-          <div className="flex flex-col md:flex-row md:items-center justify-between space-y-4 
-          md:space-y-0 ">
+          <div
+            className="flex flex-col md:flex-row md:items-center justify-between space-y-4 
+          md:space-y-0 "
+          >
             {/* Left */}
             <div className="flex items-center space-x-[100px] md:space-x-4">
               <div>
@@ -94,7 +93,7 @@ const Page = ({ params }: { params: { id: string } }) => {
               </div>
             </div>
             {/* Right */}
-            <div className="flex items-center justify-between md:space-x-4 " >
+            <div className="flex items-center justify-between md:space-x-4 ">
               <button className="text-[16px] rounded-lg whitespace-nowrap text-sm px-6 py-3 bg-primary duration-200 text-white hover:bg-primary/90">
                 Withdraw Money
               </button>
@@ -122,14 +121,18 @@ const Page = ({ params }: { params: { id: string } }) => {
                   {card.icon}
                 </div>
                 <div className="flex flex-col space-y-2">
-                  <h3 className="text-sm md:text-2xl font-semibold">{card.title}</h3>
-                  <p className="text-[12px] whitespace-nowrap md:text-sm text-gray-600">{card.value}</p>
+                  <h3 className="text-sm md:text-2xl font-semibold">
+                    {card.title}
+                  </h3>
+                  <p className="text-[12px] whitespace-nowrap md:text-sm text-gray-600">
+                    {card.value}
+                  </p>
                 </div>
               </Card>
             ))}
           </div>
         </div>
-{/* progress  */}
+        {/* progress  */}
         <div className="col-span-full lg:col-span-1">
           <div className="bg-white dark:bg-primary/10 rounded-lg shadow-sm">
             <div className="flex items-center justify-between p-6">
@@ -170,10 +173,10 @@ const Page = ({ params }: { params: { id: string } }) => {
 
 export default Page;
 interface ProgressProps {
-  stars: number; 
-  totalStars?: number; 
+  stars: number;
+  totalStars?: number;
   progressValue: number;
-  showLabel?: boolean; 
+  showLabel?: boolean;
 }
 
 const ProgressComponent = ({
@@ -193,9 +196,7 @@ const ProgressComponent = ({
             <FaRegStar className="text-[#FD8E1F]" key={`empty-star-${index}`} />
           ))}
         </div>
-        {showLabel && (
-          <p className="text-xs hidden md:block">{stars} Star</p>
-        )}
+        {showLabel && <p className="text-xs hidden md:block">{stars} Star</p>}
       </div>
       <Progress value={progressValue} className="w-3/4" />
     </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { Revenue } from "@/components/layout/dashboard/charts/Revenue";
 import { Card } from "@/components/ui/card";
 import { CustomSelect } from "@/components/common/CustomSelect";
@@ -5,8 +7,20 @@ import { dashInfo } from "@/constants";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { AiOutlineMessage } from "react-icons/ai";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 const Dashboard = () => {
+  const { token, user } = useSelector((state: RootState) => state.auth);
+
+  useEffect(() => {
+    if (!token || user?.role !== "admin") {
+      redirect("/");
+    }
+  }, [token, user]);
+
   return (
     <div>
       <h1 className="my-5 text-3xl font-semibold">Dashboard</h1>
@@ -36,8 +50,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-between py-4 px-5 border-b border-gray-600">
               <h3 className="text-lg font-semibold">Recent Activity</h3>
               <div className="w-[180px]">
-
-              <CustomSelect items={["Today", "Week", "Month", "Year"]} />
+                <CustomSelect items={["Today", "Week", "Month", "Year"]} />
               </div>
             </div>
             <ScrollArea className="h-[440px] py-4 px-5">
