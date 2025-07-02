@@ -1,10 +1,12 @@
+import ChatbotWidget from "@/components/layout/home/ChatbotWidget";
+import LandingPage from "@/components/pages/LandingPage";
+
 const Home = () => {
   return (
-    <>
-      <div>omar</div>
-      <div>7mani</div>
-      <div>fifi</div>
-    </>
+    <div>
+      <LandingPage />
+      <ChatbotWidget />
+    </div>
   );
 };
 

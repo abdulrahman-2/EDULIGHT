@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,18 +18,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased`}>
-        Auth
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <main lang="en" suppressHydrationWarning>
+      <div className={`${poppins.className} antialiased`}>{children}</div>
+    </main>
   );
 }

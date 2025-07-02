@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import Sidebar from "@/components/layout/dashboard/Sidebar";
 import Navbar from "@/components/layout/dashboard/Navbar";
 import StoreProvider from "@/components/layout/StoreProvider";
+import SidebarLayout from "@/components/layout/SidebarLayout";
+import { menus } from "@/constants";
+import AuthInitializer from "@/components/layout/AuthInitializer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,8 +24,8 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased`}>
+    <main lang="en" suppressHydrationWarning>
+      <div className={`${poppins.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,18 +33,19 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
-            <main className="h-screen flex">
-              <Sidebar />
+            <AuthInitializer />
+            <div className="flex">
+              <SidebarLayout menus={menus} />
               <div className="flex-1">
                 <Navbar />
-                <div className="p-3 bg-primary/10 dark:bg-background h-[calc(100vh-60px)]">
+                <div className="p-3 sm:p-5 bg-primary/10 dark:bg-background">
                   {children}
                 </div>
               </div>
-            </main>
+            </div>
           </StoreProvider>
         </ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </main>
   );
 }
