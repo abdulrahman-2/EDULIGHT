@@ -1,13 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { earningCard } from "@/constants";
 import React from "react";
-import { SiVisa } from "react-icons/si";
 import method1 from "@/assets/das-images/Visa.png";
 import method2 from "@/assets/das-images/group.png";
 import method3 from "@/assets/das-images/PP.png";
 import Image from "next/image";
 import check from "@/assets/das-images/CheckCircle.png";
-import { number } from "zod";
 import { Button } from "@/components/ui/button";
 import { EarningTable } from "@/components/layout/dashboard/EarningTable";
 

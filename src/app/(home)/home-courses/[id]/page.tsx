@@ -17,7 +17,7 @@ import { Progress } from "@/components/ui/progress";
 import { CustomSelect } from "@/components/common/CustomSelect";
 import Comments from "@/components/layout/dashboard/Comments";
 
-const CoursePage = async ({ params }: { params: { id: string } }) => {
+const CoursePage = async ({ params }: { params: any }) => {
   const { id } = await params;
   const course = courseContent.find((course) => course.id === Number(id));
 

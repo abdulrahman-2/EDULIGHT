@@ -7,8 +7,8 @@ import { Card } from "@/components/ui/card";
 import { CustomSelect } from "@/components/common/CustomSelect";
 import { Progress } from "@/components/ui/progress";
 
-const Page = ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const Page = async ({ params }: { params: any }) => {
+  const { id } = await params;
 
   const filteredCourse = courseContent.find(
     (course) => course.id === Number(id)
