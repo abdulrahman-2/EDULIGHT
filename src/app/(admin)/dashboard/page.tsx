@@ -7,19 +7,8 @@ import { dashInfo } from "@/constants";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { AiOutlineMessage } from "react-icons/ai";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store/store";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
 
 const Dashboard = () => {
-  const { token, user } = useSelector((state: RootState) => state.auth);
-
-  // useEffect(() => {
-  //   if (!token || user?.role !== "admin") {
-  //     redirect("/");
-  //   }
-  // }, [token, user]);
 
   return (
     <div>

@@ -2,7 +2,6 @@ import CustomSection from "@/components/layout/home/CustomSection";
 import React from "react";
 import error from "@/assets/home-images/error.png";
 import Header from "@/components/layout/home/header/Header";
-import BottomNav from "@/components/layout/home/header/BottomNav";
 
 const NotFound = () => {
   return (

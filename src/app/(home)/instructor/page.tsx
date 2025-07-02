@@ -49,7 +49,7 @@ const quotes = [
     text: "Quote 3: Another great message about teamwork and inspiration.",
   },
 ];
-const page = () => {
+const Instructor = () => {
   const [current, setCurrent] = useState(0);
 
   const prevQuote = () => {
@@ -131,7 +131,7 @@ const page = () => {
       </section>
 
       <section className="bg-primary/10 pb-0 py-10 md:py-20 ">
-      <h1 className="font-semibold text-4xl text-center">How you'll become <br />
+      <h1 className="font-semibold text-4xl text-center">How you&apos;ll become <br />
        successful instructor</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10 mt-8 container max-w-7xl mx-auto ">
           {instructorPageInfo.map((item) => (
@@ -267,4 +267,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Instructor;

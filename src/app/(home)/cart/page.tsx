@@ -1,10 +1,9 @@
 import CustomHeading from '@/components/layout/home/CustomHeading'
 import React from 'react'
 import courseImage from "@/assets/das-images/Course Images.png";
-import { FaArrowRight, FaHeart, FaStar } from "react-icons/fa6";
+import {FaStar } from "react-icons/fa6";
 import Image from 'next/image';
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 const courses = [
