@@ -1,42 +1,27 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { login, register } from "./authApi";
 import toast from "react-hot-toast";
-import {
-  getToken,
-  getUser,
-  removeToken,
-  removeUser,
-  saveToken,
-  saveUser,
-} from "@/lib/utils";
+import { saveToken, saveUser, removeToken, removeUser } from "@/lib/utils";
 
 export const signup = createAsyncThunk(
   "auth/signup",
   async (data: { fullName: string; email: string; password: string }) => {
-    try {
-      const res = await register(data);
-      return res;
-    } catch (error) {
-      throw error;
-    }
+    const res = await register(data);
+    return res;
   }
 );
 
 export const signin = createAsyncThunk(
   "auth/signin",
   async (data: { email: string; password: string }) => {
-    try {
-      const res = await login(data);
-      return res;
-    } catch (error) {
-      throw error;
-    }
+    const res = await login(data);
+    return res;
   }
 );
 
 const initialState = {
-  user: getUser(),
-  token: getToken(),
+  user: null,
+  token: null,
   loading: false,
   error: "",
 };
@@ -51,6 +36,10 @@ const authSlice = createSlice({
       state.error = "";
       removeUser();
       removeToken();
+    },
+    hydrateUser(state, action) {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
     },
   },
   extraReducers: (builder) => {
@@ -75,15 +64,13 @@ const authSlice = createSlice({
       })
       .addCase(signin.fulfilled, (state, action) => {
         state.loading = false;
-
-        const { username, email, role } = action.payload;
-
+        const { username, email, role, token } = action.payload;
         const user = { username, email, role };
-        state.user = user;
-        state.token = action.payload.token;
+        state.user = user as any;
+        state.token = token;
 
         saveUser(user);
-        saveToken(action.payload.token);
+        saveToken(token);
 
         toast.success("User login successful");
       })
@@ -95,6 +82,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, hydrateUser } = authSlice.actions;
 
 export default authSlice.reducer;

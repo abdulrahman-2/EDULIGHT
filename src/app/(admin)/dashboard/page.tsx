@@ -15,11 +15,11 @@ import { useEffect } from "react";
 const Dashboard = () => {
   const { token, user } = useSelector((state: RootState) => state.auth);
 
-  useEffect(() => {
-    if (!token || user?.role !== "admin") {
-      redirect("/");
-    }
-  }, [token, user]);
+  // useEffect(() => {
+  //   if (!token || user?.role !== "admin") {
+  //     redirect("/");
+  //   }
+  // }, [token, user]);
 
   return (
     <div>
