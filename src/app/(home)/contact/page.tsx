@@ -6,8 +6,6 @@ import contactImg from "@/assets/home-images/contact.png";
 import FormGenerator from "@/components/forms/useFormGenerator";
 import { contactInputs } from "@/constants/formInputs";
 import { contactSchema } from "@/schema";
-import Image from "next/image";
-import mapImage from "@/assets/home-images/map.png";
 type ContactInfo = {
   title: string;
   text: string;
@@ -64,7 +62,7 @@ const page = () => {
             <div className="w-full md:w-1/2 text-center md:text-left">
               <p className="text-[#1D2026] text-xl">
                 Will you be in Los Angeles or any other <br /> branches any time
-                soon? Stop by the office! <br /> We'd love to meet.
+                soon? Stop by the office! <br /> We&apos;d love to meet.
               </p>
               <div className="flex flex-col gap-5 mt-4">
                 {contactInfo.map((item) => (

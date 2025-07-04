@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/dashboard/Navbar";
 import StoreProvider from "@/components/layout/StoreProvider";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import { menus } from "@/constants";
+import AuthInitializer from "@/components/layout/AuthInitializer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <StoreProvider>
+            <AuthInitializer />
             <div className="flex">
               <SidebarLayout menus={menus} />
               <div className="flex-1">

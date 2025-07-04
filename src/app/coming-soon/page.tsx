@@ -6,7 +6,6 @@ import { socialLinks } from "@/constants";
 import Link from "next/link";
 import comingSoonImage from "@/assets/home-images/coming-soon.png"
 import dynamic from "next/dynamic";
-import { z } from "zod";
 import FormGenerator from "@/components/forms/useFormGenerator";
 import { emailSchema } from "@/schema";
 import { emailInputs } from "@/constants/formInputs";
@@ -69,7 +68,7 @@ const handleFormSubmit = (email: string) => {
           <h2 className="font-semibold text-xl text-primary">Get notified when we launch</h2>
           <div className="mt-4">
            <FormGenerator inputs={emailInputs} btnName="Notify Me"  schema={emailSchema} onSubmit={handleFormSubmit}  />
-           <p className="text-gray-400 mt-4">*Don't worry we will not spam you 😀 </p>
+           <p className="text-gray-400 mt-4">*Don&apos;t worry we will not spam you 😀 </p>
 
           </div>
 

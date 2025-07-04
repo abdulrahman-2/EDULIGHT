@@ -24,7 +24,10 @@ import { Avatar } from "@/components/common/Avatar";
 
 const BottomNav = () => {
   const router = useRouter();
-  const { token, user } = useSelector((state: RootState) => state.auth);
+  const { token, user } = useSelector((state: RootState) => state.auth) as {
+    token: string | null;
+    user: { profile?: string; email?: string } | null;
+  };
   const dispatch = useDispatch();
   const [isSticky, setIsSticky] = useState(false);
 
@@ -79,7 +82,7 @@ const BottomNav = () => {
           </Link>{" "}
         </div>
         <div className=" items-center gap-2 hidden lg:flex">
-          {token ? (
+          {token && user ? (
             <Avatar
             
               name={user.name}

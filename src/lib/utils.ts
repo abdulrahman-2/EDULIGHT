@@ -5,36 +5,50 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// save user in localStorage
+// Check if running on client
+const isClient = typeof window !== "undefined";
+
+// Save user to localStorage
 export const saveUser = (user: any) => {
-  localStorage.setItem("EduLightUser", JSON.stringify(user));
+  if (isClient) {
+    localStorage.setItem("EduLightUser", JSON.stringify(user));
+  }
 };
 
-// get user from localStorage
+// Get user from localStorage
 export const getUser = () => {
-   if (typeof window !== "undefined") {
+  if (isClient) {
     const user = localStorage.getItem("EduLightUser");
     return user ? JSON.parse(user) : null;
   }
   return null;
 };
 
-// remove user from localStorage
+// Remove user from localStorage
 export const removeUser = () => {
-  localStorage.removeItem("EduLightUser");
+  if (isClient) {
+    localStorage.removeItem("EduLightUser");
+  }
 };
 
-// save token in localStorage
+// Save token to localStorage
 export const saveToken = (token: string) => {
-  localStorage.setItem("EduLightToken", token);
+  if (isClient) {
+    localStorage.setItem("EduLightToken", token);
+  }
 };
 
-// get token from localStorage
+// Get token from localStorage
 export const getToken = () => {
-  return localStorage.getItem("EduLightToken");
+  if (isClient) {
+    return localStorage.getItem("EduLightToken");
+  }
+  return null;
 };
 
-// remove token from localStorage
+// Remove token from localStorage
 export const removeToken = () => {
-  localStorage.removeItem("EduLightToken");
+  if (isClient) {
+    localStorage.removeItem("EduLightToken");
+  }
 };

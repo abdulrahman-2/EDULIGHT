@@ -4,6 +4,7 @@ import "../globals.css";
 import StoreProvider from "@/components/layout/StoreProvider";
 import Header from "@/components/layout/home/header/Header";
 import Footer from "@/components/layout/home/Footer";
+import AuthInitializer from "@/components/layout/AuthInitializer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function HomeLayout({
     <main lang="en" suppressHydrationWarning>
       <div className={`${poppins.className} antialiased`}>
         <StoreProvider>
+          <AuthInitializer />
           {/* User */}
           <Header />
           {children}

@@ -1,9 +1,7 @@
-import { studentCard } from "@/constants";
 import React from "react";
 import courseImage from "@/assets/das-images/Course Images.png";
 import { FaHeart, FaStar } from "react-icons/fa6";
 import Image from "next/image";
-import { Heart } from "lucide-react";
 
 const courses = [
   {

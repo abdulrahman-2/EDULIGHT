@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { z } from "zod";
 import { CustomDialog } from "../CustomDialog";
 import FormGenerator from "@/components/forms/useFormGenerator";
-import { Edit } from "lucide-react";
 import { BiEditAlt } from "react-icons/bi";
 
 const EditLecDialog = () => {
