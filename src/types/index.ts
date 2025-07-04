@@ -110,3 +110,17 @@ export type StudentCard = {
  btnText:"Watch Lecture",
  status?:string
 }
+
+export type Question = {
+  id: number;
+  question: string;
+  options: string[];
+  correctAnswer?: string; 
+};
+
+export type Exam = {
+  id: number;
+  title: string;
+  duration: number; 
+  questions: Question[];
+};

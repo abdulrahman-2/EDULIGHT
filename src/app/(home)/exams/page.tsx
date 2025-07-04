@@ -21,7 +21,7 @@ const Exams = () => {
     }
   }, [mobileView]);
   return (
-    <div className="container my-10">
+    <div className="container   my-10">
       <div className="mb-5 flex flex-col lg:flex-row items-center justify-between gap-5">
         <div className="flex flex-col md:flex-row items-center gap-5">
           <div
@@ -63,7 +63,7 @@ const Exams = () => {
           </ul>
         </div>
         <div>
-          <span className="font-semibold">3,145,684 </span>
+          <span className="font-semibold">3 </span>
           results find for “ui/ux design”
         </div>
       </div>
@@ -76,7 +76,7 @@ const Exams = () => {
               !open && "xl:grid-cols-4 ml-0"
             )}
           >
-            {courseContent.slice(0, 2).map((course) => (
+            {courseContent.slice(0,1 ).map((course) => (
               <ExamCard key={course.id} {...course} />
             ))}
           </div>

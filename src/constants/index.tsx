@@ -43,6 +43,7 @@ import {
   CompaniesLogos,
   CourseCardContent,
   DashInfo,
+  Exam,
   Faqs,
   FeaturedCourses,
   FooterLinks,
@@ -61,6 +62,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import { BsQuestionSquare } from "react-icons/bs";
 
 export const menus: Links[] = [
   { name: "Dashboard", link: "/dashboard", icon: <IoStatsChart /> },
@@ -933,195 +935,32 @@ export const examasData: CourseCardContent[] = [
     image: examImg_3,
     category: "Web Development",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+      "Frontend Development Exam",
     desc: "description of the course",
-    students: "1,674,767",
-    duration: "30 minutes",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
+    students: "236",
+    duration: "15 minutes",
   },
   {
     id: 2,
-    image: examImg_1,
-    category: "Web Development",
+    image: examImg_2,
+    category: "Web Design",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+      "UIUX Design Exam",
     desc: "description of the course",
-    students: "1,674,767",
-    duration: "30 minutes",
-    question: "are you a web developer?",
-    correctAnswer: "yes",
-    incorrectAnswers: ["no", "maybe", "a7a"],
+    students: "211",
+    duration: "20 minutes",
+
   },
   {
     id: 3,
-    image: examImg_2,
+    image: examImg_1,
     category: "Web Development",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
+      "Backend Development Exam",
     desc: "description of the course",
-    students: "1,674,767",
+    students: "197",
     duration: "30 minutes",
-    question: "html is a markup language",
-    correctAnswer: "yes",
-    incorrectAnswers: ["no", "noo", "no"],
-  },
-  {
-    id: 4,
-    image: examImg_3,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "js is a markup language",
-    correctAnswer: "no",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 5,
-    image: examImg_1,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 6,
-    image: examImg_2,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 7,
-    image: examImg_3,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 8,
-    image: examImg_1,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 9,
-    image: examImg_2,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 10,
-    image: examImg_3,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 11,
-    image: examImg_1,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 12,
-    image: examImg_2,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 13,
-    image: examImg_3,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 14,
-    image: examImg_1,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
-  },
-  {
-    id: 15,
-    image: examImg_2,
-    category: "Web Development",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem.",
-    desc: "description of the course",
-    students: "1,674,767",
-    duration: "30m",
-    question: "When did the Byzantine Empire collapse?",
-    correctAnswer: "1453",
-    incorrectAnswers: ["1299", "1353", "1498"],
+
   },
 ];
 
@@ -1249,3 +1088,192 @@ export const curriculum = [
     ],
   },
 ];
+
+
+// Questions of exam 
+// constants.ts
+export const examData: Exam[] = [
+  {
+    id: 1,
+    title: "Web Development Exam",
+    duration: 15,
+    questions: [
+      {
+        id: 1,
+        question: "What does HTML stand for?",
+        options: [
+          "Home Tool Markup Language",
+          "HyperText Markup Language",
+          "Hyperlink and Text Markup Language"
+        ],
+        correctAnswer: "HyperText Markup Language"
+      },
+      {
+        id: 2,
+        question: "Which tag is used to define an unordered list in HTML?",
+        options: ["<ol>", "<ul>", "<li>"],
+        correctAnswer: "<ul>"
+      },
+      {
+        id: 3,
+        question: "What is the correct syntax for referring to an external CSS file?",
+        options: [
+          "<css src='style.css'>",
+          "<style src='style.css'>",
+          "<link rel='stylesheet' href='style.css'>"
+        ],
+        correctAnswer: "<link rel='stylesheet' href='style.css'>"
+      },
+      {
+        id: 4,
+        question: "Which HTML attribute is used to define inline styles?",
+        options: ["css", "style", "class"],
+        correctAnswer: "style"
+      },
+      {
+        id: 5,
+        question: "Which language is used for styling web pages?",
+        options: ["JavaScript", "HTML", "CSS"],
+        correctAnswer: "CSS"
+      },
+      {
+        id: 6,
+        question: "Inside which HTML element do we put JavaScript code?",
+        options: ["<script>", "<javascript>", "<js>"],
+        correctAnswer: "<script>"
+      },
+      {
+        id: 7,
+        question: "Which property is used in CSS to change text color?",
+        options: ["font-color","color" , "text-color"],
+        correctAnswer: "color"
+      },
+      {
+        id: 8,
+        question: "What is the correct syntax for a function in JavaScript?",
+        options: ["func myFunction()", "function myFunction() {}", "function:myFunction()"],
+        correctAnswer: "function myFunction() {}"
+      },
+      {
+        id: 9,
+        question: "Which symbol is used for comments in JavaScript?",
+        options: ["/* */", "<!-- -->", "//"],
+        correctAnswer: "//"
+      },
+      {
+        id: 10,
+        question: "What does DOM stand for?",
+        options: ["Document Object Model", "Digital Object Manager", "Data Object Model"],
+        correctAnswer: "Document Object Model"
+      },
+      {
+        id: 11,
+        question: "Which HTML tag is used to create a hyperlink?",
+        options: ["<a>", "<href>", "<link>"],
+        correctAnswer: "<a>"
+      },
+      {
+        id: 12,
+        question: "How do you apply a background color in CSS?",
+        options: ["bg-color", "color-background","background-color" ],
+        correctAnswer: "background-color"
+      },
+      {
+        id: 13,
+        question: "Which CSS property controls the text size?",
+        options: ["font-size", "size", "text-size"],
+        correctAnswer: "font-size"
+      },
+      {
+        id: 14,
+        question: "Which method adds an element at the end of an array in JavaScript?",
+        options: ["push()", "append()", "add()"],
+        correctAnswer: "push()"
+      },
+      {
+        id: 15,
+        question: "Which HTML tag is used to display a table?",
+        options: ["<tab>", "<table>", "<tr>"],
+        correctAnswer: "<table>"
+      },
+      {
+        id: 16,
+        question: "What does CSS stand for?",
+        options: ["Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+        correctAnswer: "Cascading Style Sheets"
+      },
+      {
+        id: 17,
+        question: "How do you write a single-line comment in JavaScript?",
+        options: ["<!-- comment -->", "// comment", "# comment"],
+        correctAnswer: "// comment"
+      },
+      {
+        id: 18,
+        question: "Which JavaScript keyword declares a block-scoped variable?",
+        options: ["var", "const", "let"],
+        correctAnswer: "let"
+      },
+      {
+        id: 19,
+        question: "Which pseudo-class targets the first child in CSS?",
+        options: [":first-element", ":first", ":first-element"],
+        correctAnswer: ":first-child"
+      },
+      {
+        id: 20,
+        question: "Which method is used to select an element by ID in JavaScript?",
+        options: [
+          "document.getElementsByClassName()",
+          "document.getElementById()",
+          "document.querySelectorAll()"
+        ],
+        correctAnswer: "document.getElementById()"
+      }
+    ]
+  }
+];
+
+
+
+
+// export const questionBank = {
+//   "web-dev": [
+//     {
+//       id: 1,
+//       question: "What does HTML stand for?",
+//       options: ["HyperText Markup Language", "HighText Machine Language", "Hyperlink and Text Markup"],
+//       answer: "HyperText Markup Language"
+//     },
+//     {
+//       id: 2,
+//       question: "Which language runs in a web browser?",
+//       options: ["Java", "C", "Python", "JavaScript"],
+//       answer: "JavaScript"
+//     }
+//   ],
+//   "ui-ux": [
+//     {
+//       id: 1,
+//       question: "What is the primary goal of UX design?",
+//       options: ["Make things pretty", "Improve usability", "Write backend logic"],
+//       answer: "Improve usability"
+//     }
+//   ],
+//   "data-science": [
+//     {
+//       id: 1,
+//       question: "What is a common Python library used for data analysis?",
+//       options: ["NumPy", "Laravel", "React"],
+//       answer: "NumPy"
+//     }
+//   ],
+//   "mobile-dev": [
+//     {
+//       id: 1,
+//       question: "Which framework is used for cross-platform mobile development?",
+//       options: ["React Native", "Flask", "Angular"],
+//       answer: "React Native"
+//     }
+//   ]
+// };
