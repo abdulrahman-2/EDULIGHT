@@ -21,6 +21,7 @@ const loadFromLocalStorage = (key: string) => {
 // ✅ Load initial states
 const cartFromStorage = loadFromLocalStorage("cart") || [];
 const wishlistFromStorage = loadFromLocalStorage("wishlist") || [];
+import roadmapSlice from "@/features/roadmaps/roadmapsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -30,6 +31,7 @@ export const store = configureStore({
     course: courseReducer,
     cart: cartReducer,
     wishlist: wishlistReducer,
+     roadmap: roadmapSlice,
   },
   preloadedState: {
     cart: { items: cartFromStorage },
