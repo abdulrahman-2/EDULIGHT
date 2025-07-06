@@ -124,3 +124,43 @@ export type Exam = {
   duration: number; 
   questions: Question[];
 };
+
+// roadmaps 
+export interface ContentCourse {
+  content_Id: number;
+  contentTitle: string;
+  contentType: string;
+  contentUrl: string;
+  created_at: string;
+}
+
+export interface Section {
+  id: number;
+  title: string;
+  contentCourse: ContentCourse[];
+}
+
+export interface Course {
+  courseId: number;
+  title: string;
+  description: string;
+  price: number;
+  posterUrl: string;
+  duration: number;
+  level: string;
+  language: string;
+  instructorId: string;
+  sections: Section[];
+  review: any[]; // يمكنك تغييره لاحقًا لنوع مضبوط
+  created_at: string;
+  category_id: number;
+  roadmap_id: number;
+}
+
+export interface Roadmap {
+  name: string;
+  description: string;
+  posterURL: string;
+  category_id: number;
+  courses: Course[];
+}

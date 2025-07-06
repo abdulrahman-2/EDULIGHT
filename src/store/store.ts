@@ -3,6 +3,7 @@ import sidebarReducer from "@/features/sidebar/sidebarSlice";
 import profileReducer from "@/features/profile/profileSlice";
 import authReducer from "@/features/auth/authSlice";
 import courseReducer from "@/features/courses/coursesSlice";
+import roadmapSlice from "@/features/roadmaps/roadmapsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     profile: profileReducer,
     auth: authReducer,
     course: courseReducer,
+     roadmap: roadmapSlice,
   },
 });
 
