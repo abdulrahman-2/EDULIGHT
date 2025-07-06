@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "@/assets/das-images/light-logo.png";
 import { CustomSelect } from "@/components/common/CustomSelect";
-import student from "@/assets/home-images/Avatar.png";
 import Search from "@/components/common/Search";
 import {
   IoCartOutline,
@@ -26,7 +25,7 @@ const BottomNav = () => {
   const router = useRouter();
   const { token, user } = useSelector((state: RootState) => state.auth) as {
     token: string | null;
-    user: { profile?: string; email?: string } | null;
+    user: { profile?: string; email?: string; username: string } | null;
   };
   const dispatch = useDispatch();
   const [isSticky, setIsSticky] = useState(false);
@@ -49,8 +48,12 @@ const BottomNav = () => {
     toast.success("Logged out successfully");
   };
   return (
-    <nav className={`flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 bg-white z-50 transition-all duration-300 ease-in-out
-      ${isSticky ? 'fixed top-0 left-0 right-0 shadow-md' : 'relative shadow-sm'}`}>
+    <nav
+      className={`flex items-center justify-between h-[80px] px-2 md:px-4 lg:px-8 bg-white z-50 transition-all duration-300 ease-in-out
+      ${
+        isSticky ? "fixed top-0 left-0 right-0 shadow-md" : "relative shadow-sm"
+      }`}
+    >
       <div className="flex items-center gap-8 ">
         <div className="flex items-center gap-1">
           <ToggleLayout
@@ -62,10 +65,10 @@ const BottomNav = () => {
         <div className="flex items-center gap-2">
           <CustomSelect
             placeholder="Browse"
-            className="text-gray-500 border-input outline-none w-[150px] hidden lg:block"
+            className="hidden lg:flex min-w-[100px]"
             items={["Web", "Mobile", "Design"]}
           />
-          <div className="w-full hidden lg:block">
+          <div className="hidden lg:flex min-w-[400px] w-full">
             <Search placeholder="What do you want to learn..." />
           </div>
         </div>
@@ -84,8 +87,7 @@ const BottomNav = () => {
         <div className=" items-center gap-2 hidden lg:flex">
           {token && user ? (
             <Avatar
-            
-              name={user.name}
+              name={user.username}
               email={user.email}
               logout={handleLogout}
             />

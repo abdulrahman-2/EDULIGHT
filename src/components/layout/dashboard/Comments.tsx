@@ -1,40 +1,42 @@
 import { CustomSelect } from "@/components/common/CustomSelect";
-import image from "@/assets/home-images/instructor.png";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const couresComments = [
   {
     id: 1,
-    image: image,
-    name: "John Doe",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Daniel Harris",
     comment:
-      "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.",
+      "The bite-sized videos helped me stay consistent. I never felt overwhelmed, and the examples made everything easier to grasp. Highly recommend this course to anyone starting with frontend!",
     rating: 5,
   },
   {
     id: 2,
-    image: image,
-    name: "Jane Smith",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Emily Carter",
     comment:
-      "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step.",
+      "Amazing structure and great teaching style! The instructor breaks down complex topics into simple, actionable lessons. This course boosted my confidence in web design.",
     rating: 4,
   },
   {
     id: 3,
-    image: image,
-    name: "Alice Johnson",
-    comment: "I learned a lot.",
+    image: "https://randomuser.me/api/portraits/men/76.jpg",
+    name: "Michael Thompson",
+    comment:
+      "I really liked the hands-on approach. Straight to the point, no fluff. Perfect for people who want to build real projects.",
     rating: 5,
   },
   {
     id: 4,
-    image: image,
-    name: "Bob Brown",
-    comment: "Great teacher.",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Sophia Green",
+    comment:
+      "Good content overall. I would’ve liked a few more advanced challenges, but still very helpful!",
     rating: 4,
   },
 ];
+
 
 const Comments = () => {
   return (
@@ -61,7 +63,7 @@ const Comments = () => {
             className="flex items-start gap-4 my-5 p-4 rounded-lg shadow-sm"
           >
             <Image
-              src={comment.image.src}
+              src={comment.image}
               alt={comment.name}
               width={50}
               height={50}

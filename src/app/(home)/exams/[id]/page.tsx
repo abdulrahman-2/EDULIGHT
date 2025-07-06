@@ -4,9 +4,8 @@ import React from "react";
 import { IoMdPlay } from "react-icons/io";
 import { TbClockHour3Filled } from "react-icons/tb";
 import { BsQuestionCircleFill } from "react-icons/bs";
-import { Question } from "@/types";
 
-const page = ({ params }: { params: { id: string } }) => {
+const page = ({ params }: { params: any }) => {
   const { id } = params;
   const examFiltered = examasData.find((exam) => exam.id === Number(id));
   if (!examFiltered) {

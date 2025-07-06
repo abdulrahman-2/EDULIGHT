@@ -19,15 +19,25 @@ export type CourseCardContent = {
   image: string | any;
   category: string;
   title: string;
-  desc?: string;
+  desc: string;
   rating?: string;
   students: string;
   price?: string;
   duration?: string;
-  question?:string;
-  correctAnswer?:string;
-  incorrectAnswers?:string[];
+  quantity?: number;
+  question?: string;
+  correctAnswer?: string;
+  incorrectAnswers?: string[];
+  instructors?: string[];
+  originalPrice?: string;
+  lessons?: {
+    id: number;
+    title: string;
+    video: string;
+    time: string;
+  }[];
 };
+
 
 export type TableData = {
   id: number;
@@ -124,3 +134,12 @@ export type Exam = {
   duration: number; 
   questions: Question[];
 };
+
+export type Instructor = {
+  id: number; 
+  image: string | any;
+  category: string,
+  title:  string,
+  rating: string,
+  students : string,
+}

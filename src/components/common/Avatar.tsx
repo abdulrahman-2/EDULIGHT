@@ -8,7 +8,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Image from "next/image";
 import Link from "next/link";
 
 export function Avatar({ name, email, logout }: any) {
@@ -16,14 +15,8 @@ export function Avatar({ name, email, logout }: any) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="">
-          {/* <Image
-            src={profile}
-            alt="avatar"
-            fill
-            className="cursor-pointer object-contain"
-          /> */}
-          <p className="cursor-pointer">Hi {name}</p>
+        <div className="w-[40px] h-[40px] rounded-full bg-primary text-white flex items-center justify-center cursor-pointer">
+          <p className="cursor-pointer">{name.slice(0,2)}</p>
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

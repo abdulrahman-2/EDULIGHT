@@ -20,7 +20,7 @@ const HCourseCard = ({
     if (best) {
       setCourses(courseContent.slice(0, 8));
     } else if (recently) {
-      setCourses(courseContent.slice(9, 16));
+      setCourses(courseContent.slice(8, 16));
     } else {
       setCourses(courseContent);
     }

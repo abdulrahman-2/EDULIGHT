@@ -1,67 +1,53 @@
-import React from "react";
-import courseImage from "@/assets/das-images/Course Images.png";
-import { FaHeart, FaStar } from "react-icons/fa6";
-import Image from "next/image";
+"use client";
 
-const courses = [
-  {
-    id: 1,
-    title: "The Ultimate Drawing Course – Beginner to Advanced",
-    rating: 4.6,
-    reviews: "451,444",
-    price: "$37.00",
-    originalPrice: "$49.00",
-    image: courseImage,
-    instructors: ["Harry Potter", "John Wick"],
-  },
-  {
-    id: 2,
-    title: "Digital Marketing Masterclass - 23 Courses in 1",
-    rating: 4.8,
-    reviews: "451,444",
-    price: "$24.00",
-    originalPrice: "",
-    image: courseImage,
-    instructors: ["Nobody"],
-  },
-  {
-    id: 3,
-    title: "Angular - The Complete Guide (2021 Edition)",
-    rating: 4.7,
-    reviews: "451,444",
-    price: "$13.00",
-    originalPrice: "",
-    image: courseImage,
-    instructors: ["Kevin Gilbert"],
-  },
-];
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { addToCart } from "@/features/cart/cartSlice";
+import { removeFromWishlist } from "@/features/wishlist/wishlistSlice";
+import Image from "next/image";
+import { FaHeart, FaStar } from "react-icons/fa6";
+import toast from "react-hot-toast";
+
 const StudentWishlist = () => {
+  const wishlist = useSelector((state: RootState) => state.wishlist.items);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (course: any) => {
+    dispatch(addToCart(course));
+    dispatch(removeFromWishlist(course.id));
+    toast.success("Added to cart");
+  };
+
+  const handleRemove = (id: number) => {
+    dispatch(removeFromWishlist(id));
+  };
+
   return (
     <main>
       <div className="flex flex-col gap-6 pt-10">
-        <div className="container md:px-0">
+        <div className="container">
           <h1 className="text-2xl font-semibold">
-            Wishlist <span className="font-normal">({courses.length})</span>
+            Wishlist <span className="font-normal">({wishlist.length})</span>
           </h1>
         </div>
 
-        <div className="container md:px-0">
-          <div className="overflow-x-auto  mt-10 border rounded-lg">
+        <div className="container">
+          <div className="overflow-x-auto mt-10 border rounded-lg">
             <div className="lg:grid grid-cols-3 font-semibold text-gray-500 border-b p-3 px-4 hidden">
               <span>COURSE</span>
-              <span className="text-center ">PRICES</span>
-              <span className="text-center ">ACTION</span>
+              <span className="text-center">PRICES</span>
+              <span className="text-center">ACTION</span>
             </div>
 
-            {courses.map((course) => (
+            {wishlist.map((course) => (
               <div
                 key={course.id}
                 className="flex items-center flex-col lg:flex-row justify-between p-4 border-b"
               >
-                <div className="flex items-center ">
-                  <div className="lg:max-w-[500px] flex flex-col sm:flex-row items-center gap-4 ">
-                    {" "}
-                    <div className="relative w-[260px]  h-[120px]">
+                <div className="flex items-center">
+                  <div className="lg:max-w-[500px] flex flex-col sm:flex-row items-center gap-4">
+                    <div className="relative w-[260px] h-[120px]">
                       <Image
                         src={course.image}
                         alt={course.title}
@@ -69,33 +55,26 @@ const StudentWishlist = () => {
                         className="object-cover rounded-md"
                       />
                     </div>
-                    <div className="flex items-center justify-center md:justify-start flex-col">
-                      <div className="flex items-center  gap-2 text-sm font-semibold">
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-2 text-sm font-semibold">
                         <span className="flex items-center gap-1">
-                          <FaStar className="text-[#FD8E1F] text-lg" />{" "}
+                          <FaStar className="text-[#FD8E1F] text-lg" />
                           {course.rating}
                         </span>
-                        <span className="text-gray-400 font-normal">
-                          ({course.reviews} Reviews)
-                        </span>
                       </div>
-                      <h3 className="font-semibold text-lg my-1 sm:my-2 text-center sm:text-left">
-                
+                      <h3 className="font-semibold text-lg my-2">
                         {course.title}
                       </h3>
-                      <p className="text-sm text-gray-600 sm:mt-1">
-                        Course by: {course.instructors.join(", ")}
+                      <p className="text-sm text-gray-600">
+                        Course by: {course.instructors?.join(", ") ?? ""}
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center mt-4 sm:mt-8 lg:mt-0 lg:w-[calc(100%-600px)] w-full justify-evenly lg:justify-between">
-                  <div className="text-center flex items-center flex-row sm:flex-col md:flex-row gap-1 mb-3 sm:mb-0">
-                    <p className="text-lg font-semibold text-blue-600 flex gap-1">
-                      <span className="font-normal text-black block lg:hidden ">
-                        Price:
-                      </span>
+                  <div className="text-center flex items-center gap-2 sm:flex-col md:flex-row mb-3 sm:mb-0">
+                    <p className="text-lg font-semibold text-blue-600">
                       {course.price}
                     </p>
                     {course.originalPrice && (
@@ -105,20 +84,32 @@ const StudentWishlist = () => {
                     )}
                   </div>
 
-                  <div className="flex  items-center gap-2">
-                    <button className="px-3 md:px-4 lg:px-6 py-2 md:py-3 hover:bg-gray-100 bg-gray-200 duration-200 text-gray-700 rounded-lg ">
+                  <div className="flex items-center gap-2">
+                    <button className="px-4 py-2 bg-gray-200 hover:bg-gray-100 rounded-lg text-gray-700">
                       Buy Now
                     </button>
-                    <button className="px-3 md:px-4 lg:px-6 py-2 md:py-3 bg-primary text-white rounded-lg hover:bg-primary/90 duration-200 ">
+                    <button
+                      className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90"
+                      onClick={() => handleAddToCart(course)}
+                    >
                       Add To Cart
                     </button>
-                    <button className="text-gray-400  bg-gray-200 w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center hover:text-primary duration-200 transition-colors">
+                    <button
+                      onClick={() => handleRemove(course.id)}
+                      className="text-gray-400 bg-gray-200 w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center hover:text-primary"
+                    >
                       <FaHeart size={20} />
                     </button>
                   </div>
                 </div>
               </div>
             ))}
+
+            {wishlist.length === 0 && (
+              <div className="p-6 text-center text-gray-500">
+                No courses in wishlist.
+              </div>
+            )}
           </div>
         </div>
       </div>
