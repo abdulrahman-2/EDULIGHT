@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,20 +8,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Image from "next/image";
 import Link from "next/link";
 
-export function Avatar({ profile, email, logout }: any) {
+export function Avatar({ name, email, logout }: any) {
+  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="relative size-10 rounded-full p-2 border dark:border-gray-600">
-          <Image
-            src={profile}
-            alt="avatar"
-            fill
-            className="cursor-pointer object-contain"
-          />
+        <div className="w-[40px] h-[40px] rounded-full bg-primary text-white flex items-center justify-center cursor-pointer">
+          <p className="cursor-pointer">{name.slice(0,2)}</p>
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

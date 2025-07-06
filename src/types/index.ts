@@ -19,12 +19,25 @@ export type CourseCardContent = {
   image: string | any;
   category: string;
   title: string;
-  desc?: string;
+  desc: string;
   rating?: string;
   students: string;
   price?: string;
   duration?: string;
+  quantity?: number;
+  question?: string;
+  correctAnswer?: string;
+  incorrectAnswers?: string[];
+  instructors?: string[];
+  originalPrice?: string;
+  lessons?: {
+    id: number;
+    title: string;
+    video: string;
+    time: string;
+  }[];
 };
+
 
 export type TableData = {
   id: number;
@@ -106,4 +119,66 @@ export type StudentCard = {
   title: string;
  btnText:"Watch Lecture",
  status?:string
+}
+
+export type Question = {
+  id: number;
+  question: string;
+  options: string[];
+  correctAnswer?: string; 
+};
+
+export type Exam = {
+  id: number;
+  title: string;
+  duration: number; 
+  questions: Question[];
+};
+
+export type Instructor = {
+  id: number; 
+  image: string | any;
+  category: string,
+  title:  string,
+  rating: string,
+  students : string,
+}
+// roadmaps 
+export interface ContentCourse {
+  content_Id: number;
+  contentTitle: string;
+  contentType: string;
+  contentUrl: string;
+  created_at: string;
+}
+
+export interface Section {
+  id: number;
+  title: string;
+  contentCourse: ContentCourse[];
+}
+
+export interface Course {
+  courseId: number;
+  title: string;
+  description: string;
+  price: number;
+  posterUrl: string;
+  duration: number;
+  level: string;
+  language: string;
+  instructorId: string;
+  sections: Section[];
+  review: any[]; // يمكنك تغييره لاحقًا لنوع مضبوط
+  created_at: string;
+  category_id: number;
+  roadmap_id: number;
+}
+
+export interface Roadmap {
+  name: string;
+  description: string;
+  posterURL: string;
+  category_id: number;
+  courses: Course[];
 }

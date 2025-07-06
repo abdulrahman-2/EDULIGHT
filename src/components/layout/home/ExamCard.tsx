@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { examasData } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ExamCard = () => {
@@ -8,6 +9,7 @@ const ExamCard = () => {
     <>
       {examasData.map((exam) => (
         <Card key={exam.id} className="overflow-hidden">
+          <Link href={`/exams/${exam.id}`}>
           <div className="flex flex-col ">
             <div className="relative h-[170px] w-full  ">
               <Image
@@ -48,7 +50,7 @@ const ExamCard = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div></Link>
         </Card>
       ))}
     </>

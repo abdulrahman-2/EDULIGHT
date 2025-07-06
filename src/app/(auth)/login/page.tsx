@@ -9,7 +9,7 @@ import { loginSchema } from "@/schema";
 import { loginInputs } from "@/constants/formInputs";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { signin } from "@/features/auth/authSlice";
 import { getToken } from "@/lib/utils";
 import { useEffect } from "react";
@@ -23,9 +23,9 @@ const Login = () => {
 
   useEffect(() => {
     if (token) {
-      redirect("/login");
+      router.push("/");
     }
-  }, [token]);
+  }, [router, token]);
 
   const handleFormSubmit = async (data: {
     email: string;

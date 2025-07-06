@@ -1,5 +1,4 @@
 import Image from "next/image";
-import courseImage from "@/assets/home-images/cardImage.png";
 import { featuredCourses } from "@/constants";
 import { FaStar } from "react-icons/fa6";
 import { LuChartNoAxesColumnIncreasing, LuClock3, LuUserRound } from "react-icons/lu";
@@ -13,7 +12,7 @@ const FeatCourseCard = () => {
         >
           <div className="w-full md:w-1/3 h-[160px] relative rounded-lg overflow-hidden ">
             <Image
-              src={courseImage}
+              src={course.image}
               alt={course.title}
               fill
               className="object-cover"

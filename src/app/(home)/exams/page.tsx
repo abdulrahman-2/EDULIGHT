@@ -21,7 +21,7 @@ const Exams = () => {
     }
   }, [mobileView]);
   return (
-    <div className="container my-10">
+    <div className="container   my-10">
       <div className="mb-5 flex flex-col lg:flex-row items-center justify-between gap-5">
         <div className="flex flex-col md:flex-row items-center gap-5">
           <div
@@ -51,22 +51,6 @@ const Exams = () => {
           />
         </div>
       </div>
-      <div className="mb-6 flex flex-col md:flex-row items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <span>Suggestions:</span>
-          <ul className="flex flex-wrap items-center gap-1 text-sm text-primary font-semibold">
-            <li className="cursor-pointer">user interface</li>
-            <li className="cursor-pointer">user experience</li>
-            <li className="cursor-pointer">web design</li>
-            <li className="cursor-pointer">interface</li>
-            <li className="cursor-pointer">app</li>
-          </ul>
-        </div>
-        <div>
-          <span className="font-semibold">3,145,684 </span>
-          results find for “ui/ux design”
-        </div>
-      </div>
       <div className="flex">
         <ExamSidebar open={open} />
         <div className="flex-1">
@@ -76,7 +60,7 @@ const Exams = () => {
               !open && "xl:grid-cols-4 ml-0"
             )}
           >
-            {courseContent.slice(0, 2).map((course) => (
+            {courseContent.slice(0,1 ).map((course) => (
               <ExamCard key={course.id} {...course} />
             ))}
           </div>

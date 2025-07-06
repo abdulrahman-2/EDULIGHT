@@ -30,7 +30,6 @@ const FormGenerator = ({
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       {inputs.map((group: any, index: number) => {
-        // If `group.fields` exists, it's a grouped row, otherwise treat it as a single input
         const fields = group.fields ? group.fields : [group];
 
         return (
@@ -75,6 +74,10 @@ const FormGenerator = ({
                         {...field}
                         onChange={(value) => field.onChange(value)}
                       />
+                    ) : input.type === "textarea" ? (
+                      <textarea
+                        {...field}
+                        rows={input.rows || 4}/>
                     ) : input.type === "textarea" ? ( // ✅ إضافة حالة textarea
                       <textarea
                         {...field}
