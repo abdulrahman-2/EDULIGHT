@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import signUpImg from "@/assets/home-images/signup-img.png";
-import googleImg from "@/assets/home-images/google.svg";
-import facebookImg from "@/assets/home-images/facebook.svg";
 import FormGenerator from "@/components/forms/useFormGenerator";
 import { createAccountSchema } from "@/schema";
 import { signUpInputs } from "@/constants/formInputs";
@@ -92,36 +90,6 @@ const SignUp = () => {
               Sign in
             </Link>
           </p>
-
-          <div className="flex items-center justify-center gap-3 mt-4 w-full">
-            <span className="w-full h-[1px] bg-gray-500 rounded-lg"></span>
-            <span className="text-gray-600 text-nowrap">Sign Up With</span>
-            <span className="w-full h-[1px] bg-gray-500 rounded-lg"></span>
-          </div>
-
-          <div className="flex items-center justify-center gap-3 mt-4">
-            <div className="flex items-center gap-6 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-gray-100 transition duration-200 ease-in-out">
-              <Image
-                src={googleImg}
-                width={30}
-                height={30}
-                alt="google"
-                className="w-8 h-8 cursor-pointer"
-              />
-              <span>Google</span>
-            </div>
-
-            <div className="flex items-center gap-6 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-gray-100 transition duration-200 ease-in-out">
-              <Image
-                src={facebookImg}
-                width={30}
-                height={30}
-                alt="facebook"
-                className="w-8 h-8 cursor-pointer"
-              />
-              <span>Facebook</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>

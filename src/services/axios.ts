@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://edulightapi.runasp.net/api";
+const baseUrl = "/api";
 
 const axiosInstance = axios.create({
   baseURL: baseUrl,

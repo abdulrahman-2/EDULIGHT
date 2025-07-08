@@ -12,6 +12,7 @@ import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
+import { useRouter } from "next/navigation";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
@@ -21,6 +22,7 @@ const CartPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const user = useSelector((state: RootState) => state.auth.user);
+  const router = useRouter();
 
   const handleRemove = (id: number) => {
     dispatch(removeFromCart(id));
@@ -69,6 +71,7 @@ const CartPage = () => {
       }
     } else {
       toast.error("Please sign in to make Checkout");
+      router.push("/login");
     }
   };
 

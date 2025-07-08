@@ -81,6 +81,12 @@ import {
 } from "react-icons/fa6";
 import { LuCodeXml } from "react-icons/lu";
 
+import Machine from "@/assets/new-courses/Machine.png";
+import SOLID from "@/assets/new-courses/39.png";
+import AWS from "@/assets/new-courses/12.png";
+import Node from "@/assets/new-courses/13.png";
+import Game from "@/assets/new-courses/22.png";
+
 export const menus: Links[] = [
   { name: "Dashboard", link: "/dashboard", icon: <IoStatsChart /> },
   {
@@ -302,27 +308,27 @@ export const courseContent: CourseCardContent[] = [
   },
   {
     id: 4,
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-    category: "Marketing",
-    title: "Digital Marketing Masterclass: 23 Courses in 1",
-    desc: "Learn SEO, email marketing, social media & more.",
-    rating: "4.5",
-    students: "312,788",
-    price: "$14.99",
+    image: Machine,
+    category: "Machine Learning",
+    title: "Machine Learning Masterclass: From Basics to Advanced",
+    desc: "Master supervised & unsupervised learning, model evaluation, and real-world ML projects.",
+    rating: "4.8",
+    students: "198,532",
+    price: "$19.99",
   },
   {
     id: 5,
-    image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
-    category: "Mobile Development",
-    title: "iOS & Android App Development with Flutter",
-    desc: "Build beautiful cross-platform apps with Dart and Flutter.",
-    rating: "4.6",
-    students: "120,913",
-    price: "$24.99",
+    image: SOLID,
+    category: "Software Engineering",
+    title: "Mastering SOLID Principles: Write Clean & Scalable Code",
+    desc: "Understand and apply the 5 SOLID principles to build better object-oriented software.",
+    rating: "4.8",
+    students: "54,120",
+    price: "$15.99",
   },
   {
     id: 6,
-    image: "https://images.pexels.com/photos/8296971/pexels-photo-8296971.jpeg",
+    image: AWS,
     category: "IT & Software",
     title: "AWS Certified Solutions Architect - Associate",
     desc: "Get AWS certified and learn real cloud architecture skills.",
@@ -332,23 +338,23 @@ export const courseContent: CourseCardContent[] = [
   },
   {
     id: 7,
-    image: "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg",
-    category: "Personal Development",
-    title: "Productivity & Time Management for Professionals",
-    desc: "Boost your daily productivity using proven strategies.",
-    rating: "4.4",
-    students: "98,447",
-    price: "$13.99",
+    image: Node,
+    category: "Web Development",
+    title: "The Complete Node.js Developer Course (3rd Edition)",
+    desc: "Build real-world applications using Node.js, Express, MongoDB, and more.",
+    rating: "4.7",
+    students: "201,342",
+    price: "$17.99",
   },
   {
     id: 8,
-    image: "https://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg",
-    category: "Finance & Accounting",
-    title: "Accounting & Financial Statement Analysis",
-    desc: "Understand balance sheets, income statements & cash flow.",
-    rating: "4.5",
-    students: "83,902",
-    price: "$19.99",
+    image: Game,
+    category: "Game Development",
+    title: "Game Programming Masterclass: Unity & C# from Scratch",
+    desc: "Learn how to build 2D and 3D games using Unity engine and C# scripting.",
+    rating: "4.6",
+    students: "142,580",
+    price: "$21.99",
   },
   {
     id: 9,
@@ -587,7 +593,6 @@ export const homeNavItems: Links[] = [
   { name: "About", link: "/about", icon: undefined },
   { name: "Contact", link: "/contact", icon: undefined },
   { name: "Become an Instructor", link: "/instructor", icon: undefined },
-  { name: "Become a Company", link: "/company", icon: undefined },
 ];
 
 export const homeCategories: HomeCategories[] = [

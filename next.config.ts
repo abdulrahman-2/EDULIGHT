@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "http://edulightapi.runasp.net/api/:path*",
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
@@ -10,7 +18,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "randomuser.me",
       },
-          {
+      {
         protocol: "http",
         hostname: "edulightapi.runasp.net",
       },

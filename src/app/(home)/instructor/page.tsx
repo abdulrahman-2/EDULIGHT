@@ -1,10 +1,10 @@
 'use client'
 import CustomHeading from "@/components/layout/home/CustomHeading";
 import CustomSection from "@/components/layout/home/CustomSection";
-import instructorImg from "@/assets/home-images/becom-instructor.png";
+import instructorImg from "@/assets/BecomeanInstuctor.png";
 import { aboutInfo, instructorPageInfo } from "@/constants";
 import Image from "next/image";
-import sectionImage1 from "@/assets/home-images/instructorImage.png";
+import sectionImage1 from "@/assets/home-images/instructorImage3.png";
 import sectionImage2 from "@/assets/home-images/instructorImage2.png";
 import sectionImage3 from "@/assets/home-images/instructorImage3.png";
 import instructors from "@/assets/home-images/instructors.png"
