@@ -34,6 +34,12 @@ import JavaScript from "@/assets/course-Images/JavaScript.avif";
 import UI from "@/assets/course-Images/UI.png";
 import Marketing from "@/assets/course-Images/marketing.avif";
 
+import instructor_1 from "../assets/instractors/instructor_1.png"
+import instructor_2 from "../assets/instractors/instructor_2.png"
+import instructor_3 from "../assets/instractors/instructor_3.png"
+import instructor_4 from "../assets/instractors/instructor_4.png"
+import instructor_5 from "../assets/instractors/instructor_5.png"
+
 import {
   PiChartBarHorizontalDuotone,
   PiCheckSquareOffsetDuotone,
@@ -664,7 +670,7 @@ export const featuredCourses: FeaturedCourses[] = [
     price: "$14.99",
     oldPrice: "$84.99",
     ratingCount: "195,000",
-    instructorImage: "https://randomuser.me/api/portraits/men/32.jpg",
+    instructorImage: instructor_1,
   },
   {
     id: 2,
@@ -680,7 +686,7 @@ export const featuredCourses: FeaturedCourses[] = [
     price: "$12.99",
     oldPrice: "$59.99",
     ratingCount: "40,211",
-    instructorImage: "https://randomuser.me/api/portraits/men/75.jpg",
+    instructorImage: instructor_2,
   },
   {
     id: 3,
@@ -696,7 +702,7 @@ export const featuredCourses: FeaturedCourses[] = [
     price: "$15.99",
     oldPrice: "$99.99",
     ratingCount: "124,379",
-    instructorImage: "https://randomuser.me/api/portraits/men/45.jpg",
+    instructorImage: instructor_3,
   },
   {
     id: 4,
@@ -712,7 +718,7 @@ export const featuredCourses: FeaturedCourses[] = [
     price: "$13.99",
     oldPrice: "$79.99",
     ratingCount: "108,000",
-    instructorImage: "https://randomuser.me/api/portraits/women/68.jpg",
+    instructorImage: instructor_4,
   },
 ];
 
@@ -746,7 +752,7 @@ export const techAndEarn: TechAndEarn[] = [
 export const instructorInfo: Instructor[] = [
   {
     id: 1,
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
+    image: instructor_1,
     category: "Full-Stack Web Developer",
     title: "Brad Traversy",
     rating: "4.9",
@@ -754,7 +760,7 @@ export const instructorInfo: Instructor[] = [
   },
   {
     id: 2,
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    image: instructor_2,
     category: "UI/UX Designer",
     title: "Angela Yu",
     rating: "4.8",
@@ -762,7 +768,7 @@ export const instructorInfo: Instructor[] = [
   },
   {
     id: 3,
-    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    image: instructor_3,
     category: "Data Scientist",
     title: "Jose Portilla",
     rating: "4.9",
@@ -770,7 +776,7 @@ export const instructorInfo: Instructor[] = [
   },
   {
     id: 4,
-    image: "https://randomuser.me/api/portraits/women/75.jpg",
+    image: instructor_4,
     category: "Digital Marketing Expert",
     title: "Phil Ebiner",
     rating: "4.7",
@@ -778,7 +784,7 @@ export const instructorInfo: Instructor[] = [
   },
   {
     id: 5,
-    image: "https://randomuser.me/api/portraits/men/38.jpg",
+    image: instructor_5,
     category: "AI & Machine Learning Engineer",
     title: "Andrew Ng",
     rating: "4.9",
@@ -1043,7 +1049,7 @@ export const studentDash: DashInfo[] = [
     color: "#293897",
     bgColor: "#EAEBF5",
     title: "Enrolled Courses",
-    value: "957",
+    value: "1",
   },
   {
     id: 2,
@@ -1051,7 +1057,7 @@ export const studentDash: DashInfo[] = [
     color: "#FF6636",
     bgColor: "#FFDDD1",
     title: "Active Courses",
-    value: "6",
+    value: "1",
   },
   {
     id: 3,
@@ -1059,7 +1065,7 @@ export const studentDash: DashInfo[] = [
     color: "#23BD33",
     bgColor: "#E1F7E3",
     title: "Completed Courses",
-    value: "901",
+    value: "0",
   },
 ];
 
