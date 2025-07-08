@@ -2,10 +2,16 @@ import { CustomSelect } from "@/components/common/CustomSelect";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
+import instructor_1 from "../../../assets/course-Images/placeHolder.png";
+import instructor_2 from "../../../assets/course-Images/placeHolder.png";
+import instructor_3 from "../../../assets/course-Images/placeHolder.png";
+import instructor_4 from "../../../assets/course-Images/placeHolder.png";
+import instructor_5 from "../../../assets/course-Images/placeHolder.png";
+
 const couresComments = [
   {
     id: 1,
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: instructor_1,
     name: "Daniel Harris",
     comment:
       "The bite-sized videos helped me stay consistent. I never felt overwhelmed, and the examples made everything easier to grasp. Highly recommend this course to anyone starting with frontend!",
@@ -13,7 +19,7 @@ const couresComments = [
   },
   {
     id: 2,
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: instructor_2,
     name: "Emily Carter",
     comment:
       "Amazing structure and great teaching style! The instructor breaks down complex topics into simple, actionable lessons. This course boosted my confidence in web design.",
@@ -21,7 +27,7 @@ const couresComments = [
   },
   {
     id: 3,
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
+    image: instructor_3,
     name: "Michael Thompson",
     comment:
       "I really liked the hands-on approach. Straight to the point, no fluff. Perfect for people who want to build real projects.",
@@ -29,14 +35,21 @@ const couresComments = [
   },
   {
     id: 4,
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    image: instructor_4,
     name: "Sophia Green",
     comment:
       "Good content overall. I would’ve liked a few more advanced challenges, but still very helpful!",
     rating: 4,
   },
+  {
+    id: 4,
+    image: instructor_5,
+    name: "Olivia Brown",
+    comment:
+      "This course was a game-changer for me! The instructor's clear explanations and practical examples made learning frontend development enjoyable. I loved the interactive quizzes that reinforced my understanding.",
+    rating: 4,
+  },
 ];
-
 
 const Comments = () => {
   return (
@@ -90,7 +103,9 @@ const Comments = () => {
       </div>
 
       <div className="mt-5">
-        <Button className="py-3 px-5 bg-[#EAEBF5] text-primary">Load More</Button>
+        <Button className="py-3 px-5 bg-[#EAEBF5] text-primary">
+          Load More
+        </Button>
       </div>
     </div>
   );
